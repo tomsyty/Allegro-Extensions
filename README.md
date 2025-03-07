@@ -341,6 +341,25 @@ Stan magazynowy możesz zmienić klikając liczbę przy napisie "pozostało:" na
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write, allegro:api:orders:read``
 <br>  
 <br>  
+### Ostrzegaj przed ponownym wygenerowaniem etykiety
+
+Ten moduł pozwala zorientować się w momencie nadawania, że przesyłka dla danego zamówienia została już utworzona. Przydatne np. gdy kilka osób jednocześnie szykuje zamówienia na różnych komputerach. Pozwala to uniknąć sytuacji gdy zostaną wygenerowane dwie etykiety. Moduł sprawdza w momencie kliknięcia przycisku "Nadaj etykietę", czy do danego zamówienia został przypisany jakiś numer przesyłki. Jeśli tak jest, to na stronie pojawi się komunikat
+
+![Alt text](assets/shipment_exists_warning.png)
+
+Jeśli do danego zamówienia nie ma jeszcze wprowadzonego numeru przesyłki, to przycisk "Zapisz" zmieni kolor na zielony - informując tym samym, że moduł dokonał sprawdzenia i nie znalazł żadnego numeru.
+
+![Alt text](assets/shipment_exists_warning_ready.png)
+
+Ponieważ sprawdzanie numeru przesyłki odbywa się w momencie kliknięcia "Nadaj przesyłkę", nie uchroni to przed sytuacją, gdy np. na dwóch komputerach otworzysz stronę nadawania przesyłki, przez parę minut będziesz ją szykował po czym klikniesz "Zapisz". Najlepiej zamawiać przesyłkę klikając "Nadaj przesyłkę" w momencie gdy ma się zamiar wydruku etykiety.
+
+Jeśli korzystasz z modułu "Automatyczne pobieranie i drukowanie etykiet adresowych" możesz jednak uniknąć i tej sytuacji, gdyż w memencie kliknięcia przycisku "Zapisz i pobierz" nastąpi dodatkowe sprawdzenie obecności numeru przesyłki. W razie gdy zostanie on znaleziony, dalsze czynności zapisywania, pobierania i drukowania etykiety zostaną przerwane.
+
+![Alt text](assets/shipment_exists_warning.gif)
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
+<br>  
+<br>  
 ### Zmień grupowo dodatkowe informacje od sprzedającego
 
 Ten moduł pozwala na grupową zmianę pola "Dodatkowe informacje od sprzedającego" we wszystkich aukcjach. Włącz ten moduł za każdym razem gdy chcesz go użyć, jego stan nie będzie zapisywany. Ponieważ moduł ten nie jest uruchamiany w kontekście strony musisz wskazać czy chcesz dokonać zmiany w normalnym serwisie Allegro czy w serwisie testowym Sandbox.
