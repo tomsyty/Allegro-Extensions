@@ -20,7 +20,7 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	- Automatyczne pobieranie i drukowanie etykiet adresowych
 	- Wypełnianie wagi i wielkości przesyłki
 	- Szybkie przełączanie sposobu nadawania przesyłek InPost
-	- Wykrywanie błędów w danych adresowych
+	- Szybkie wysyłanie nowej wiadomości do kupującego
 
 	Pozostałe moduły korzystają z API, aby ich używać wymagane będzie uzupełnienie danych Client ID i Client Secret. Uzyskasz je rejestrując aplikację na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/)
 	<details>
@@ -211,6 +211,17 @@ Zmiany domyślnej opcji możesz dokonać w ustawieniach rozszerzenia lub klikaj�
 ![Alt text](assets/inpost_send_mode.gif)
 <br>  
 <br>  
+### Szybkie wysyłanie nowej wiadomości do kupującego
+
+Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" w Wysyłam z Allegro.
+
+![Alt text](assets/send_message_from_orders_page_button.png)
+
+Kliknięcie tego przycisku otworzy w nowej karcie stronę wysyłania nowej wiadomości z uzupełnionymi polami "Login odbiorcy" oraz "Numer zamówienia".
+
+![Alt text](assets/send_message_from_orders_page.gif)
+<br>  
+<br>  
 ### Wykrywanie błędów w danych adresowych
 Allegro zezwala kupującym na wprowadzanie danych, które przy próbie zapisania przesyłki spowodują wystąpienie błędu. Należą do nich m.in.
 - brak spacji między nazwą ulicy a numerem domu
@@ -385,6 +396,21 @@ Czasami rozszerzenie może wymagać przeładowania na stronie rozszerzeń. Po pr
 ![Alt text](assets/chrome_checking_background_console.gif)
 
 W przypadku modułów korzystających z API błędem może być nie zaznaczenie właściwych uprawnień na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/). Moduły korzystają z minimalnej potrzebnej liczby uprawnień, pamiętaj że jeśli włączysz jakiś moduł i na stronie opcji rozszerzeń dokonasz logowania a następnie włączysz inny moduł korzystający z innych uprawnień, musisz ponownie kliknąć "Zaloguj".
+
+Nie zmieniaj ikony folderu w którym przechowywane jest rozszerzenie. Jeśli to zrobisz, utworzysz w nim plik "desktop.ini" (ukryty chroniony plik systemowy) który uniemożliwia załadowanie rozszerzenia. Na stronie opcji rozszerzenia przy kafelku z rozszerzeniem pojawi się przycisk "Błędy"
+
+![Alt text](assets/chrome_extension_error.png)
+
+po kliknięciu którego pojawi się lista błędów, a na niej
+
+![Alt text](assets/chrome_extension_error_desktop_ini.png)
+
+<details>
+<summary>Jsk wyłączyć ukrywanie chronionych plików systemu operacyjnego aby móc usunąć plik "desktop.ini"</summary>
+Aby usunąć plik "desktop.ini" z folderu, trzeba będzie wyłączyć ukrywanie chronionych plików systemowych w eksploratorze Windows - pokazane dla systemu Windows 10. Karta "Widok", na końcu "Opcje" - "Zmień opcje folderów i wyszukiwania", w wyskakującym oknie karta "Widok", w sekcji "Ustawienia zaawansowane" - pozycja "Ukryj chronione pliki systemu operacyjnego (zalecane)".
+
+![Alt text](assets/hide_protected_system_files.png)
+</details>
 
 
 ***
