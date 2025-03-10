@@ -406,7 +406,7 @@ po kliknięciu którego pojawi się lista błędów, a na niej
 ![Alt text](assets/chrome_extension_error_desktop_ini.png)
 
 <details>
-<summary>Jsk wyłączyć ukrywanie chronionych plików systemu operacyjnego aby móc usunąć plik "desktop.ini"</summary>
+<summary>Jak wyłączyć ukrywanie chronionych plików systemu operacyjnego aby móc usunąć plik "desktop.ini"</summary>
 Aby usunąć plik "desktop.ini" z folderu, trzeba będzie wyłączyć ukrywanie chronionych plików systemowych w eksploratorze Windows - pokazane dla systemu Windows 10. Karta "Widok", na końcu "Opcje" - "Zmień opcje folderów i wyszukiwania", w wyskakującym oknie karta "Widok", w sekcji "Ustawienia zaawansowane" - pozycja "Ukryj chronione pliki systemu operacyjnego (zalecane)".
 
 ![Alt text](assets/hide_protected_system_files.png)
