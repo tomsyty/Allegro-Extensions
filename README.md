@@ -213,13 +213,17 @@ Zmiany domyślnej opcji możesz dokonać w ustawieniach rozszerzenia lub klikaj�
 <br>  
 ### Szybkie wysyłanie nowej wiadomości do kupującego
 
-Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" w Wysyłam z Allegro.
+Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" oraz na stronie "zwroty" w Wysyłam z Allegro .
 
 ![Alt text](assets/send_message_from_orders_page_button.png)
+
+![Alt text](assets/send_message_from_returns_page_button.png)
 
 Kliknięcie tego przycisku otworzy w nowej karcie stronę wysyłania nowej wiadomości z uzupełnionymi polami "Login odbiorcy" oraz "Numer zamówienia".
 
 ![Alt text](assets/send_message_from_orders_page.gif)
+
+![Alt text](assets/send_message_from_returns_page.gif)
 <br>  
 <br>  
 ### Wykrywanie błędów w danych adresowych
