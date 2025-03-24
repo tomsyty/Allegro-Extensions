@@ -4,3 +4,6 @@
   - dodano nowy moduł "Szybkie wysyłanie nowej wiadomości do kupującego"
 [2025-03-13] v1.0.3
   - dodano przycisk wysyłania nowej wiadomości z modułu "Szybkie wysyłanie nowej wiadomości do kupującego" w dodatkowym miejscu - na stronie "zwroty"
+[2025-03-24] v1.0.4
+  - dodano nowy moduł "Dodatkowe opcje sortowania zamówień"
+  - moduły "Wypełnianie wagi i wielkości przesyłki", "Szybkie przełączanie sposobu nadawania przesyłek InPost", "Wykrywanie błędów w danych adresowych" zostały przystosowane do przesyłek nadawanych przy użyciu przycisku "Nadaj wiele"
