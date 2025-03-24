@@ -3,7 +3,7 @@ To rozszerzenie usprawnia pracę z Allegro dodając brakujące funkcjonalności 
 
 Jest to rozszerzenie do przeglądarki Chrome. Wszystkie rozszerzenia testuję tylko dla systemu Windows 10 i najnowszej wersji przeglądarki.
 
-**Na wstępie pragnę zaznaczyć że nie odpowiadam za żadne problemy wynikłe z użytkowania tego rozszerzenia. Z wielu funkcjonalności po prostu nie korzystam - np. z zestawów produktów, wznawiania ofert z pełnym zestawem przedmiotów, nadawania wielu przesyłek jednocześnie itp. tak więc nie wiem jak zachowa się ono w określonych sytuacjach.**
+**Na wstępie pragnę zaznaczyć że nie odpowiadam za żadne problemy wynikłe z użytkowania tego rozszerzenia. Z wielu funkcjonalności po prostu nie korzystam - np. z zestawów produktów, wznawiania ofert z pełnym zestawem przedmiotów itp. tak więc nie wiem jak zachowa się ono w określonych sytuacjach.**
 
 Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synchronizuje swojego działania między nimi, wszelkie dane są zapisywane lokalnie na danym komputerze.
 
@@ -111,6 +111,7 @@ Służy do zmiany koloru ikony faktury VAT z domyślnego szarego, który nie wyr
 Domyślnie do wyboru jest kilkanaście predefiniowanych kolorów, ale można też wybrać dowolny, przy czym wymagana będzie wtedy dodatkowa czynność - szczegóły po wybraniu koloru spoza palety domyślnych.
 <br>  
 <br> 
+
 ### Automatyczne pobieranie i drukowanie etykiet adresowych  
 
 Upraszcza i skraca czas potrzebny na pobranie i wydrukowanie etykiety adresowej. Po kliknięciu "Nadaj przesyłkę" zamiast wykonywania kilku czynności:
@@ -161,15 +162,18 @@ Po kliknięciu przycisku "Nadaj przesyłkę" na liście zamówień w Sales Cente
 Po kliknięciu tego przycisku wszystkie czynności związane z pobieraniem i wydrukiem etykiety zostaną wykonane automatycznie. Sporadycznie może się zdarzyć, że program nie wykryje zakończenia momentu pobierania - pojawi się wtedy okno z komunikatem "Nie wykryto zakończenia pobierania w sposób automatyczny w ustalonym okresie czasu. Ostatnio znaleziony pobrany plik to (nazwa pliku). Upewnij się że jest to plik z etykietą którą chcesz wydrukować a nie plik wcześniejszy. Czy wydrukować?" Sprawdź czy jest to etykieta którą chcesz wydrukować i zatwierdź. Zauważyłem że dzieje się to głównie wtedy gdy strona Allegro trochę zwalnia z powodu obciążenia (koło godz. 14-15) albo przy wydruku pierwszej etykiety po uruchomieniu komputera. Raz na jakiś czas (co miesiąc albo nawet rzadziej) warto kliknąć "Wyczyść wszystko" na stronie historii pobierania.
 
 Aby uniknąć omyłkowego wydruku tej samej etykiety, po wydruku przycisk "Nadaj etykietę" na stronie Sales Center przy danym zamówieniu zostanie zablokowany.
+
+Moduł ten działa tylko dla pojedynczych przesyłek. W przypadku korzystania z opcji "Nadaj wiele", przycisk "Zapisz i drukuj" nie będzie widoczny na stronie.
 <br>  
 <br> 
+
 ### Wypełnianie wagi i wielkości przesyłki
 
 Pozwala automatycznie wypełnić pola dotyczące wielkości przesyłki (lub zaznaczyć odpowiednią wielkość). Definiowane osobno dla każdej formy dostawy. Dla przesyłek których wymiary podaje się ręcznie, nie z wybieralnej listy, dodaje dodatkowo opcje do 9 szablonów których kliknięcie szybko wstawi dane wartości do pól dotyczących wielkości przesyłki. Ponadto długie przytrzymanie przycisku danego szablonu (lub wybieralnej predefiniowanej opcji) oznaczy ten szablon (tą opcję) jako domyślną.
 
 ![Alt text](assets/autofill_package_size_numeric_values_filled.png)
 
-Moduł ten działa tylko dla pojedynczych przesyłek, nie wypełni wartości jeśli korzystasz z przycisku "Dodaj kolejną przesyłkę".
+Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy użyciu przycisku "Nadaj wiele", nie uwzględnia jednak dodatkowych przesyłek w ramach jednego zamówienia - po kliknięciu przycisku "Dodaj kolejną przesyłkę".
 
 Na stronie opcji rozrzerzenia trzeba skonfigurować wartości domyślne. W przypadku wartości których wymiary podaje się w polach długość, szerokość, wysokość i waga - należy wpisać je w odpowiednich polach i kliknąć "Zapisz", lub dodać kolejne szablony jeśli planujemy korzystać z większej liczby rozmiarów przesyłek przy nadawaniu. W momencie zapisywania szablon który był zaznaczony staje się szablonem domyślnym. W przypadku przesyłek które posiadają predefiniowane wymiary - należy zaznaczyć domyślną opcję i kliknąć "Zapisz".
 
@@ -196,6 +200,7 @@ Przy nadawaniu do pól wstawiane są wartości domyśłne (lub zaznaczana jest d
 ![Alt text](assets/autofill_package_size_change_default_template.gif)
 <br>  
 <br>  
+
 ### Szybkie przełączanie sposobu nadawania przesyłek InPost
 
 Zaznacza automatycznie wybrany sposób nadania przesyłki InPost: 
@@ -209,11 +214,14 @@ Zaznacza automatycznie wybrany sposób nadania przesyłki InPost:
 Zmiany domyślnej opcji możesz dokonać w ustawieniach rozszerzenia lub klikając i przytrzymując wybraną opcję na stronie "Wysyłam z Allegro" aż podświetli się na zielono.
 
 ![Alt text](assets/inpost_send_mode.gif)
+
+Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy użyciu przycisku "Nadaj wiele".
 <br>  
 <br>  
+
 ### Szybkie wysyłanie nowej wiadomości do kupującego
 
-Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" oraz na stronie "zwroty" w Wysyłam z Allegro .
+Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" oraz na stronie "zwroty" w Wysyłam z Allegro.
 
 ![Alt text](assets/send_message_from_orders_page_button.png)
 
@@ -226,7 +234,21 @@ Kliknięcie tego przycisku otworzy w nowej karcie stronę wysyłania nowej wiado
 ![Alt text](assets/send_message_from_returns_page.gif)
 <br>  
 <br>  
+
+### Dodatkowe opcje sortowania zamówień
+
+Dodaje nowe opcje sortowania zamówień. Na obecną chwilę jest to sortowanie według liczby pozycji rosnąco. 
+
+Wybranie dodatkowej pozycji "ilość pozycji: rosnąco" z rozwijalnej listy "sortuj" posortuje zamówienia według liczby pozycji w kolejności rosnącej. Sortowane są tylko zamówienia na danej stronie, tak więc jeśli masz zamówienia na drugiej albo kolejnych stronach - nie zostaną one uwzględnione przy tym sortowaniu.
+
+Zauważ że po kliknięciu opcji której nie ma normalnie w rozwijalnym menu nie zmieni się parametr w adresie strony. Odświeżenie strony lub wybranie np. dodatkowych opcji z listy filtrów już po sortowaniu przywróci domyślny sposób wyświetlania. Używaj opcji sortowania na samym końcu, po ewentualnym zastosowaniu pozostałych filtrów.
+
+![Alt text](assets/additional_sorting_options_sort_by_quantity.gif)
+<br>  
+<br>  
+
 ### Wykrywanie błędów w danych adresowych
+
 Allegro zezwala kupującym na wprowadzanie danych, które przy próbie zapisania przesyłki spowodują wystąpienie błędu. Należą do nich m.in.
 - brak spacji między nazwą ulicy a numerem domu
 - zbyt krótkie lub zbyt długie imię lub nazwisko
@@ -250,9 +272,12 @@ Moduł posiada opcję która przyda mi się przy usprawnianiu działania tego na
 
 Próbka taka w momencie wystąpienia błędu podczas zapisywania przesyłki zostanie wysłana do mojej bazy danych, dzięki czemu będę mógł znaleźć odpowiednie wzorce powodujące wystąpienie błędów i usprawnić działanie rozszerzenia. Jeśli chcesz mnie w tym wesprzec - zaznacz opcję "Pomóż ulepszyć program anonimowo przesyłając zanonimizowane dane w momencie wystąpienia błędu."
 
+Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy użyciu przycisku "Nadaj wiele".
+
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 <br>  
 <br>  
+
 ### Zmiana tytułu aukcji na liście ofert
 
 Pozwala zmienić tytuł aukcji bezpośrednio na liście ofert bez konieczności przechodzenia przez formularz edycji. Przydatne zwłaszcza gdy chcesz zmienić wiele tytułów aukcji w krótkim czasie lub znajdziesz błąd w tytule i chcesz szybko go poprawić. Oprócz tego poszerza trochę kolumnę z tytułem aukcji aby nie skracało tekstu gdy tytuł ten jest bardzo długi, zbliżony do maksymalnego limitu znaków.
@@ -264,6 +289,7 @@ W celu zmiany tytułu, najedź na niego, wciśnij zdefiniowany skrót klawiaturo
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write``
 <br>  
 <br>  
+
 ### Szybka zmiana liczby przedmiotów
 
 Pozwala zmienić liczbę przedmiotów na aukcji bez konieczności przechodzenia przez formularz edycji oraz jeszcze szybciej niż przy pomocy edycji za pomocą ołówka obok liczby sztuk. Wystarczy najechać na liczbę sztuk i po podświetleniu jej na żółto można dokonać edycji przyciskami lub kółkiem myszki albo kliknąć i wpisać z klawiatury lub zmienić strzałkami na klawiaturze i zatwierdzić przyciskiem lub klawiszem <kbd>Enter</kbd> Aby anulować wystarczy odsunąć myszkę poza obszar wpisywania i przycisków lub w trakcie wpisywania wcisnąć klawisz <kbd>Esc</kbd>.
@@ -277,7 +303,9 @@ Ustawienie stanu na 0 zakończy aukcję, zwiększenie stanu w zakończonej aukcj
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write``
 <br>  
 <br>  
+
 ### Przywracanie przedmiotów z anulowanego zamówienia
+
 Moduł ten pozwala w łatwy sposób przywrócić stan przedmiotów na aukcjach po anulowaniu zamówienia przez kupującego (lub po automatycznym anulowaniu albo po zwrocie). Jeżeli w sekcji danego zamówienia pojawi się któryś ze zwrotów: "Kupujący anulował", "Kupujący zgłosił zwrot", "Automatyczne anulowanie - informacja", "rabat transakcyjny" to pojawi się dodatkowy przycisk "Przywróć stan".
 
 ![Alt text](assets/restore_cancelled.png)
@@ -293,6 +321,7 @@ Po kliknięciu przycisku "Przywróć" stan magazynowy przedmiotów na aukcjach z
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write, allegro:api:orders:read, allegro:api:orders:write``
 <br>  
 <br>  
+
 ### Przywracanie przedmiotów z listy zwrotów
 
 Moduł ten pozwala w łatwy sposób przywrócić stan przedmiotów na aukcjach po dokonaniu zwrotu przez kupującego. Jeżeli na stronie listy zwrotów znajdzie się zwrot z ostatnich 60 dni ze statusem "Doręczony" lub "W drodze", w sekcji danego zwrotu pojawi się dodatkowy przycisk "Przywróć stan" (na zdjęciu widoczne jest że pojawia się również dla statusu "Zwrot zgłoszony", jednak jest to tylko tymczasowo na potrzeby przygotowania niniejszej dokumentacji, taki status nie powinien być brany pod uwagę aby nie dokonać zwrotu przedwcześnie).
@@ -330,6 +359,7 @@ Pracuję jeszcze nad stabilnością tego rozwiązania, ponieważ czasami zdarzy 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write, allegro:api:orders:read``
 <br>  
 <br>  
+
 ### Pokazuj nazwę produktu na liście ofert
 
 Moduł ten pokazuje nazwę produktu na liście ofert w kolumnie "Katalog produktów Allegro". Dodatkowo pokazuje średnią ocenę produktu wraz z reprezentacją graficzną rozkładu liczby gwiazdek.
@@ -342,7 +372,8 @@ Po najechaniu myszką na wykres graficzny rozkład ten zostanie przedstawiony ba
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
 <br>  
-<br>  
+<br> 
+
 ### Pokazuj stan magazynowy i nazwę produktu na liście zamówień
 
 Ten moduł pokazuje stan magazynowy aukcji i nazwę produktu na liście zamówień. Można dzięki temu w łatwy sposób kontrolować stan magazynowy w trakcie pakowania - np. gdy zobaczymy że po spakowaniu przedmiotu którego ostatnią sztukę wyjęliśmy z pudełka pokazuje nam że jest jeszcze kilka sztuk na aukcji, możemy szybko ją zakończyć. Alternatywnie gdy widzimy że została np. jedna sztuka a my mamy ich więcej, możemy szybko zwiększyć ich stan na aukcji. Moduł uwzględnia liczbę sprzedanych sztuk w pozostałych zamówieniach mających status płatności "Opłacone" lub "Płatność za pobraniem", nie bierze pod uwagę zamówień nieopłaconych.
@@ -356,6 +387,7 @@ Stan magazynowy możesz zmienić klikając liczbę przy napisie "pozostało:" na
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read, allegro:api:sale:offers:write, allegro:api:orders:read``
 <br>  
 <br>  
+
 ### Ostrzegaj przed ponownym wygenerowaniem etykiety
 
 Ten moduł pozwala zorientować się w momencie nadawania, że przesyłka dla danego zamówienia została już utworzona. Przydatne np. gdy kilka osób jednocześnie szykuje zamówienia na różnych komputerach. Pozwala to uniknąć sytuacji gdy zostaną wygenerowane dwie etykiety. Moduł sprawdza w momencie kliknięcia przycisku "Nadaj etykietę", czy do danego zamówienia został przypisany jakiś numer przesyłki. Jeśli tak jest, to na stronie pojawi się komunikat
@@ -375,6 +407,7 @@ Jeśli korzystasz z modułu "Automatyczne pobieranie i drukowanie etykiet adreso
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 <br>  
 <br>  
+
 ### Zmień grupowo dodatkowe informacje od sprzedającego
 
 Ten moduł pozwala na grupową zmianę pola "Dodatkowe informacje od sprzedającego" we wszystkich aukcjach. Włącz ten moduł za każdym razem gdy chcesz go użyć, jego stan nie będzie zapisywany. Ponieważ moduł ten nie jest uruchamiany w kontekście strony musisz wskazać czy chcesz dokonać zmiany w normalnym serwisie Allegro czy w serwisie testowym Sandbox.
