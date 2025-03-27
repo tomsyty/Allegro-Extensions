@@ -7,3 +7,6 @@
 [2025-03-24] v1.0.4
   - dodano nowy moduł "Dodatkowe opcje sortowania zamówień"
   - moduły "Wypełnianie wagi i wielkości przesyłki", "Szybkie przełączanie sposobu nadawania przesyłek InPost", "Wykrywanie błędów w danych adresowych" zostały przystosowane do przesyłek nadawanych przy użyciu przycisku "Nadaj wiele"
+[2025-03-27] v1.0.5
+  - dodano nowy moduł "Pokazuj status przesyłek"
+  - poprawiono błąd ładowania modułu "Dodatkowe opcje sortowania zamówień"
