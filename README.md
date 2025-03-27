@@ -21,6 +21,7 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	- Wypełnianie wagi i wielkości przesyłki
 	- Szybkie przełączanie sposobu nadawania przesyłek InPost
 	- Szybkie wysyłanie nowej wiadomości do kupującego
+	- Dodatkowe opcje sortowania zamówień
 
 	Pozostałe moduły korzystają z API, aby ich używać wymagane będzie uzupełnienie danych Client ID i Client Secret. Uzyskasz je rejestrując aplikację na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/)
 	<details>
@@ -407,6 +408,27 @@ Jeśli korzystasz z modułu "Automatyczne pobieranie i drukowanie etykiet adreso
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 <br>  
 <br>  
+
+### Pokazuj status przesyłek
+
+Ten moduł pokazuje status przesyłek na stronie "Zamówione przesyłki" w postaci paska postępu o różnych kolorach w zależności od ostatniego zarejestrowanego statusu zamówienia. Sporadycznie w systemie śledzenia przesyłek mogą pojawić się zdarzenia w nieprawidłowej kolejności (np. status "doręczona" a po nim "wydana do doręczenia"), warto mieć to na uwadze.
+
+![Alt text](assets/show_shipment_status.png)
+
+Znaczenie poszczególnych kolorów:
+
+![Alt text](assets/shipment_status_pending.png) - przesyłka oczekuje na nadanie  
+![Alt text](assets/shipment_status_in_transit.png) - przesyłka w transporcie  
+![Alt text](assets/shipment_status_released_for_delivery.png) - przesyłka wydana do doręczenia  
+![Alt text](assets/shipment_status_ready_for_pickup.png) - przesyłka gotowa do odbioru  
+![Alt text](assets/shipment_status_delivered.png) - przesyłka doręczona  
+![Alt text](assets/shipment_status_notice_left.png) - przesyłka awizowana  
+![Alt text](assets/shipment_status_returned.png) - przesyłka zwrócona  
+![Alt text](assets/shipment_status_error.png) - problem z przesyłką
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, allegro:api:shipments:read, allegro:api:shipments:write``
+<br>  
+<br> 
 
 ### Zmień grupowo dodatkowe informacje od sprzedającego
 
