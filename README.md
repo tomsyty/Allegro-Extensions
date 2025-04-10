@@ -13,7 +13,8 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 2. Kliknij ikonę menu rozszerzeń w prawym górnym rogu okna przeglądarki (ikona puzzla) ![Alt text](assets/chrome_extensions_menu_icon.png) lub z menu przeglądarki wybierz "Rozszerzenia - Zarządzaj rozszerzeniami".
 3. Włącz "Tryb dewelopera" w prawym górnym rogu okna przeglądarki ![Alt text](assets/chrome_enabled_developer_mode.png)
 4. Kliknij przycisk "Załaduj rozpakowane"  
-![Alt text](assets/chrome_extensions_load_unpacked_button.png)
+	
+	![Alt text](assets/chrome_extensions_load_unpacked_button.png)
 5. Wybierz folder z uprzednio pobranym i rozpakowanym rozszerzeniem.
 6. Po załadowaniu rozszerzenia otworzy się strona jego opcji, gdzie będziesz mógł włączyć poszczególne moduły. Część z nich nie wymaga dostępu do API, są to moduły: 
 	- Zmiana koloru ikony FV
@@ -33,18 +34,33 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	4. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
 		- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
 		- **Wybierz rodzaj aplikacji:** zaznacz pierwszą opcję - "Aplikacja ma dostęp do przeglądarki, w której użytkownik loguje się do Allegro (np. aplikacja na serwerze albo plik wykonywalny)"  
-		![Alt text](assets/allegro_application_type_code_flow.png)
+
+			![Alt text](assets/allegro_application_type_code_flow.png)
 		- **Ścieżka aplikacji:** na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Ścieżka aplikacji**. Jest to unikalny adres aplikacji w domenie chromiumapp.org pod który Allegro będzie przesyłać kod autoryzujący i tokeny dostępowe.
-		- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.
+		- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
+
+			Na stronie opcji rozszerzenia przyznane już uprawnienia oznaczone są zielonym kolorem. Jeżeli jakieś uprawnienia nie zostały przyznane, oznaczone będą one czerwonym kolorem.  
+
+			![Alt text](assets/options_page_scopes.png)
+			Uprawnienia dotyczące zwykłego serwisu Allegro określa kolorowa czcionka. Podkreślenie oznacza uprawnienia dla serwisu testowego Sandbox. Jeśli nie korzystasz z niego, wszystkie uprawnienia będą miały czerwone podkreślenie.
+			
+			Jeżeli w momencie włączania modułu nie masz przyznanych uprawnień - pojawi się powiadomienie
+
+			![Alt text](assets/options_page_scopes_not_granted_warning.png)
+
+			Musisz wtedy edytować zarejestrowaną aplikację na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/) i zaznaczyć wymagane uprawnienia. Po dokonaniu tej czynności trzeba ponownie kliknąć przycisk Zaloguj na stronie opcji rozszerzenia.
+
 		- Zaznacz `* Znam i akceptuję regulamin REST API Allegro`.
 		- Kliknij przycisk "Zarejestruj".
 		- Na koncie możesz mieć do 5 zarejestrowanych aplikacji. Jeżeli chciałbyś ją usunąć zrobisz to na tej samej stronie.
 	5. Aplikacja zostanie zarejestrowana. Kliknij "Szczegóły" aby odczytać Client ID i Client Secret. Zaznacz i skopiuj parametr Client ID, wklej go na stronie opcji rozszerzenia w polu Client ID. Kliknij "Pokaż" przy parametrze Client Secret, aby odsłonić domyślnie zamaskowaną wartość tego parametru, zaznacz i skopiuj parametr Client Secret, wklej go na stronie opcji rozszerzenia w polu Client Secret. Zamknij okno ze szczegółami aplikacji.
 	6. Kliknij "Zapisz" a następnie "Zaloguj" na stronie opcji rozszerzenia. Zostaniesz przeniesiony na stronę Allegro gdzie musisz potwierdzić że kontynuujesz jako zalogowany użytkownik  
-	![Alt text](assets/allegro_confirm_account_dialog.png)
+		
+		![Alt text](assets/allegro_confirm_account_dialog.png)
 	7. Kliknij przycisk "Kontynuuj".
 	8. Zostaniesz przeniesiony na stronę Allegro z pytaniem czy chcesz powiązać swoje konto z aplikacją  
-	![Alt text](assets/allegro_account_linking_question_allegro-api-sale-offers-read,allegro-api-sale-offers-write,allegro-api-sale-orders-read,allegro-api-sale-orders-write,allegro-api-profile-read.png)
+	
+		![Alt text](assets/allegro_account_linking_question_allegro-api-sale-offers-read,allegro-api-sale-offers-write,allegro-api-sale-orders-read,allegro-api-sale-orders-write,allegro-api-profile-read.png)
 	9. Kliknij przycisk "Tak, powiąż konto". Jeśli chiałbyś usunąć powiązanie aplikacji z kontem zrobisz to na stronie Allegro - Moje Allegro - Konto - Bezpieczeństwo - [Powiązane aplikacje](https://allegro.pl/moje-allegro/moje-konto/powiazane-aplikacje)
 	10. Na stronie opcji rozszerzenia pojawi się komunikat o zalogowaniu wraz z nazwą użytkownika.  
 	</details>
@@ -67,32 +83,52 @@ Trzeba było więc sobie jakoś z tym poradzić więc stworzyłem zewnętrzną a
 5. Usuń z edytora obecną zawartość pliku i wklej skopiowany tekst. Zapisz wciskając <kbd>Ctrl</kbd> + <kbd>s</kbd>.
 6. Kliknij "Wdróż" - "Nowe wdrożenie".
 7. Kliknij ikonę kółka zębatego i wybierz "Aplikacja internetowa". Pole "Opis" nie jest wymagane, parametr "Wykonaj jako": "Ja (adres konta Google)", "Kto ma dostęp" zmień na "Każdy". Kliknij "Wdróż"  
+
 	![Alt text](assets/google_deploy_settings.png)
 8. Pojawi się komunikat o konieczności udzielenia dostępu do aplikacji internetowej. Kliknij przycisk "Udziel dostępu", wybierz konto Google, pojawi się kolejny komunikat informujący o tym że aplikacja nie jest zweryfikowana. Kliknij "Zaawansowane", następnie "Otwórz Allegro (niebezpieczne)" (gdzie "Allegro" to nazwa aplikacji nadana wcześniej w edytorze)  
+
 	![Alt text](assets/google_unsafe_warning.png)
 9. W kolejnym komunikacie pojawi się informacja że aplikacja chce uzyskać dostęp do konta Google w zakresie łączenia się z usługą zewnętrzną. Kliknij "Zezwól"  
+
 	![Alt text](assets/google_access_allow.png)
 
 	Jeśli chciałbyś usunąć udzielony dostęp do konta Google zrobisz to w ustawieniach konta, sekcja "Bezpieczeństwo" - "Twoje połączenia z aplikacjami i usługami innych firm".
-10. Na stronie wdrożenia pojawi się komunikat ze szczegółami wdrożenia, z których istotnym parametrem jest link - aplikacja internetowa. Skopiuj go i wklej na stronie opcji rozszerzenia do pola "Adres aplikacji internetowej" 
-  ![Alt text](assets/google_new_deployment.png)  
+10. Na stronie wdrożenia pojawi się komunikat ze szczegółami wdrożenia, z których istotnym parametrem jest link - aplikacja internetowa. Skopiuj go i wklej na stronie opcji rozszerzenia do pola "Adres aplikacji internetowej"  
+
+	![Alt text](assets/google_new_deployment.png)  
 11. Przejdź na stronę [developer.allegro.pl](https://developer.allegro.pl/).
 12. Kliknij "Zarządzaj API" - "Moje aplikacje (sandbox)". Upewnij się że zalogowany jesteś na konto Allegro (sandbox) w ramach którego działać będzie aplikacja. Jeśli nie, wyloguj się (klikając ikonę obok nazwy użytkownika i wybierz "Wyloguj") a następnie zaloguj się na właściwe konto.
 13. Kliknij przycisk "Zarejestruj aplikację".
 14. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
 	- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
 	- **Wybierz rodzaj aplikacji:** zaznacz drugą opcję ("Aplikacja działa w środowisku bez dostępu do przeglądarki lub klawiatury (np. aplikacja konsolowa lub na urządzeniu typu telewizor)")  
-	![Alt text](assets/allegro_application_type_device_flow.png)
-	- **Uprawnienia aplikacji:** zaznacz następujące uprawnienia: `allegro:api:sale:offers:read` `allegro:api:sale:offers:write` (sekcja **Zarządzanie ofertami**), `allegro:api:profile:read` (sekcja **Dane osobowe**).
+
+		![Alt text](assets/allegro_application_type_device_flow.png)
+	- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
+
+		Na stronie opcji rozszerzenia przyznane już uprawnienia oznaczone są zielonym kolorem. Jeżeli jakieś uprawnienia nie zostały przyznane, oznaczone będą one czerwonym kolorem.  
+
+		![Alt text](assets/options_page_scopes.png)
+		Uprawnienia dotyczące zwykłego serwisu Allegro określa kolorowa czcionka. Podkreślenie oznacza uprawnienia dla serwisu testowego Sandbox.
+		
+		Jeżeli w momencie włączania modułu nie masz przyznanych uprawnień - pojawi się powiadomienie
+
+		![Alt text](assets/options_page_scopes_not_granted_warning.png)
+
+		Musisz wtedy edytować zarejestrowaną aplikację na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczyć wymagane uprawnienia. Po dokonaniu tej czynności trzeba ponownie kliknąć przycisk Zaloguj na stronie opcji rozszerzenia.
+
 	- Zaznacz `* Znam i akceptuję regulamin REST API Allegro`.
 	- Kliknij przycisk "Zarejestruj".
 	- Na koncie możesz mieć do 5 zarejestrowanych aplikacji. Jeżeli chciałbyś ją usunąć zrobisz to na tej samej stronie.
 15. Aplikacja zostanie zarejestrowana. Kliknij "Szczegóły" aby odczytać Client ID i Client Secret. Zaznacz i skopiuj parametr Client ID, wklej go na stronie opcji rozszerzenia w polu Client ID. Kliknij "Pokaż" przy parametrze Client Secret, aby odsłonić domyślnie zamaskowaną wartość tego parametru, zaznacz i skopiuj parametr Client Secret, wklej go na stronie opcji rozszerzenia w polu Client Secret. Zamknij okno ze szczegółami aplikacji.
 16. Kliknij "Zapisz" a następnie "Zaloguj" na stronie opcji rozszerzenia. Zostaniesz przeniesiony na stronę Allegro gdzie musisz wprowadzić kod podany przez aplikację (kod uzupełni się automatycznie)  
+
 	![Alt text](assets/allegro_enter_device_code.png)
 17. Kliknij przycisk "Dalej". Zostaniesz przeniesiony na stronę Allegro gdzie musisz potwierdzić że kontynuujesz jako zalogowany użytkownik  
+
 	![Alt text](assets/allegro_confirm_account_dialog.png)
 18. Kliknij przycisk "Kontynuuj". Zostaniesz przeniesiony na stronę Allegro z pytaniem czy chcesz powiązać swoje konto z aplikacją  
+
 	![Alt text](assets/allegro_account_linking_question_allegro-api-sale-offers-read,allegro-api-sale-offers-write,allegro-api-sale-orders-read,allegro-api-sale-orders-write,allegro-api-profile-read.png)
 19. Kliknij przycisk "Tak, powiąż konto". Jeśli chiałbyś usunąć powiązanie aplikacji z kontem zrobisz to na stronie Allegro - Moje Allegro - Konto - Bezpieczeństwo - [Powiązane aplikacje](https://allegro.pl.allegrosandbox.pl/moje-allegro/moje-konto/powiazane-aplikacje)
 20. Na stronie opcji rozszerzenia pojawi się komunikat o zalogowaniu wraz z nazwą użytkownika.  
@@ -363,13 +399,25 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read,
 
 ### Pokazuj nazwę produktu na liście ofert
 
-Moduł ten pokazuje nazwę produktu na liście ofert w kolumnie "Katalog produktów Allegro". Dodatkowo pokazuje średnią ocenę produktu wraz z reprezentacją graficzną rozkładu liczby gwiazdek.
+Moduł ten pokazuje nazwę produktu na liście ofert w kolumnie "Katalog produktów Allegro". Dodatkowo pokazuje średnią ocenę produktu wraz z reprezentacją graficzną rozkładu liczby gwiazdek. 
 
 ![Alt text](assets/show_product_name.png)
 
 Po najechaniu myszką na wykres graficzny rozkład ten zostanie przedstawiony bardziej szczegółowo.
 
 ![Alt text](assets/show_product_name_rating_details.png)
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
+<br>  
+<br> 
+
+### Pokazuj tagi ofertowe na liście ofert
+
+Moduł ten pokazuje tagi ofertowe na liście ofert pod numerem aukcji. Tagi ofertowe to tagi które możesz utworzyć na Allegro jeżeli masz wykupiony abonament sklepowy. Pozwalają na zdefiniowanie własnych kategorii produktów i przypisanie ich do poszczególnych aukcji, tagi są wyświetlane po kliknięciu "Wszystkie przedmioty sprzedającego" po lewej stronie pod domyślnymi kategoriami zdefiniowanymi przez Allegro.
+
+![Alt text](assets/offer_tags.gif)
+
+Moduł posiada dodatkową opcję "Domyślnie ukrywaj tagi i pokazuj po wciśnięciu skrótu klawiaturowego", po której zaznaczeniu tagi nie będą domyślnie pobierane ani pokazywane, nastąpi to dopiero po wciśnięciu zdefiniowanego skrótu klawiaturowego. Ponowne jego wciśnięcie ukryje tagi.
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
 <br>  
@@ -454,7 +502,7 @@ Czasami rozszerzenie może wymagać przeładowania na stronie rozszerzeń. Po pr
 
 ![Alt text](assets/chrome_checking_background_console.gif)
 
-W przypadku modułów korzystających z API błędem może być nie zaznaczenie właściwych uprawnień na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/). Moduły korzystają z minimalnej potrzebnej liczby uprawnień, pamiętaj że jeśli włączysz jakiś moduł i na stronie opcji rozszerzeń dokonasz logowania a następnie włączysz inny moduł korzystający z innych uprawnień, musisz ponownie kliknąć "Zaloguj".
+W przypadku modułów korzystających z API błędem może być nie zaznaczenie właściwych uprawnień na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/). Moduły korzystają z minimalnej potrzebnej liczby uprawnień, pamiętaj że jeśli włączysz jakiś moduł i na stronie opcji rozszerzeń dokonasz logowania a następnie włączysz inny moduł korzystający z innych uprawnień, musisz ponownie kliknąć "Zaloguj". Rozszerzenie pokazuje które uprawnienia są przyznane i dodatkowo w momencie włączania rozszerzenia które nie ma jakichś uprawnień pokaże informację o potrzebie ich przyznania i ponownym zalogowaniu.
 
 Nie zmieniaj ikony folderu w którym przechowywane jest rozszerzenie. Jeśli to zrobisz, utworzysz w nim plik "desktop.ini" (ukryty chroniony plik systemowy) który uniemożliwia załadowanie rozszerzenia. Na stronie opcji rozszerzenia przy kafelku z rozszerzeniem pojawi się przycisk "Błędy"
 
