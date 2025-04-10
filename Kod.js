@@ -63,7 +63,7 @@ function doPost(e) {
           const code = responseJSON.getResponseCode();      
           let response = JSON.parse(responseJSON);
           if (code == 200) {
-            return ContentService.createTextOutput(JSON.stringify({ status: 'success', accessToken: response.access_token, refreshToken: response.refresh_token })).setMimeType(ContentService.MimeType.JSON); 
+            return ContentService.createTextOutput(JSON.stringify({ status: 'success', accessToken: response.access_token, refreshToken: response.refresh_token, scope: response.scope.split(' ').join(', ') })).setMimeType(ContentService.MimeType.JSON); 
           } else if (code == 400) {
             if (response.error === 'access_denied') {
               return ContentService.createTextOutput(JSON.stringify({ status: 'error', details: 'Użytkownik odmówił autoryzacji.' })).setMimeType(ContentService.MimeType.JSON);
@@ -101,7 +101,7 @@ function doPost(e) {
         Logger.log(`refresh token status code: ${code}`);
         if (code == 200) {
           const response = JSON.parse(responseJSON);  
-          return ContentService.createTextOutput(JSON.stringify({ status: 'success', accessToken: response.access_token, refreshToken: response.refresh_token })).setMimeType(ContentService.MimeType.JSON); 
+          return ContentService.createTextOutput(JSON.stringify({ status: 'success', accessToken: response.access_token, refreshToken: response.refresh_token, scope: response.scope.split(' ').join(', ') })).setMimeType(ContentService.MimeType.JSON); 
         } else {
           return ContentService.createTextOutput(JSON.stringify({ status: 'error', details: 'Błąd podczas odświeżania tokena.' })).setMimeType(ContentService.MimeType.JSON);
         }
