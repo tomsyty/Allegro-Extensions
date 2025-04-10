@@ -1,12 +1,16 @@
 [2025-03-07] v1.0.1
-  - dodano nowy moduł "Ostrzegaj przed ponownym wygenerowaniem etykiety"
+  - Dodano nowy moduł "Ostrzegaj przed ponownym wygenerowaniem etykiety"
 [2025-03-10] v1.0.2
-  - dodano nowy moduł "Szybkie wysyłanie nowej wiadomości do kupującego"
+  - Dodano nowy moduł "Szybkie wysyłanie nowej wiadomości do kupującego"
 [2025-03-13] v1.0.3
-  - dodano przycisk wysyłania nowej wiadomości z modułu "Szybkie wysyłanie nowej wiadomości do kupującego" w dodatkowym miejscu - na stronie "zwroty"
+  - Dodano przycisk wysyłania nowej wiadomości z modułu "Szybkie wysyłanie nowej wiadomości do kupującego" w dodatkowym miejscu - na stronie "zwroty"
 [2025-03-24] v1.0.4
-  - dodano nowy moduł "Dodatkowe opcje sortowania zamówień"
-  - moduły "Wypełnianie wagi i wielkości przesyłki", "Szybkie przełączanie sposobu nadawania przesyłek InPost", "Wykrywanie błędów w danych adresowych" zostały przystosowane do przesyłek nadawanych przy użyciu przycisku "Nadaj wiele"
+  - Dodano nowy moduł "Dodatkowe opcje sortowania zamówień"
+  - Moduły "Wypełnianie wagi i wielkości przesyłki", "Szybkie przełączanie sposobu nadawania przesyłek InPost", "Wykrywanie błędów w danych adresowych" zostały przystosowane do przesyłek nadawanych przy użyciu przycisku "Nadaj wiele"
 [2025-03-27] v1.0.5
-  - dodano nowy moduł "Pokazuj status przesyłek"
-  - poprawiono błąd ładowania modułu "Dodatkowe opcje sortowania zamówień"
+  - Dodano nowy moduł "Pokazuj status przesyłek"
+  - Poprawiono błąd ładowania modułu "Dodatkowe opcje sortowania zamówień"
+[2025-04-10] v1.0.6
+ - Dodano nowy moduł "Pokazuj tagi ofertowe na liście ofert".
+ - Na stronie opcji rozszerzenia pokazywane są teraz przyznane uprawnienia API w ramach uzyskanego tokena dostępowego. Po instalacji tej wersji rozszerzenia wymagane jest ponowne zalogowanie przyciskiem "Zaloguj" aby były one prawidłowo pokazywane. Jeśli korzystasz z serwisu testowego Sandbox - musisz najpierw zaktualizować skrypt na serwerze zastępując go nowym kodem z pliku "Kod.js" a następnie wykonać nowe wdrożenie - zmieni się wtedy adres aplikacji internetowej, który trzeba skopiować i wkleić w odpowiednie pole, po czym zapisać i zalogować - tak jak opisane w dokumentacji w sekcji "Instrukcja rejestracji aplikacji dla serwisu testowego".
+ - Ograniczono sprawdzanie dostępności aktualizacji do nie częściej niż raz na 24h
