@@ -14,3 +14,5 @@
  - Dodano nowy moduł "Pokazuj tagi ofertowe na liście ofert".
  - Na stronie opcji rozszerzenia pokazywane są teraz przyznane uprawnienia API w ramach uzyskanego tokena dostępowego. Po instalacji tej wersji rozszerzenia wymagane jest ponowne zalogowanie przyciskiem "Zaloguj" aby były one prawidłowo pokazywane. Jeśli korzystasz z serwisu testowego Sandbox - musisz najpierw zaktualizować skrypt na serwerze zastępując go nowym kodem z pliku "Kod.js" a następnie wykonać nowe wdrożenie - zmieni się wtedy adres aplikacji internetowej, który trzeba skopiować i wkleić w odpowiednie pole, po czym zapisać i zalogować - tak jak opisane w dokumentacji w sekcji "Instrukcja rejestracji aplikacji dla serwisu testowego".
  - Ograniczono sprawdzanie dostępności aktualizacji do nie częściej niż raz na 24h
+[2025-04-13] v1.0.7
+ - Do modułu "Ostrzegaj przed ponownym wygenerowaniem etykiety" dodano nową funkcjonalność - sprawdzanie czy zamówienie nie zostało anulowane
