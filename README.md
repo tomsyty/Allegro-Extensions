@@ -437,11 +437,16 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read,
 <br>  
 <br>  
 
-### Ostrzegaj przed ponownym wygenerowaniem etykiety
+### Ostrzegaj przed ponownym wygenerowaniem etykiety oraz sprawdź czy zamówienie nie zostało anulowane
 
-Ten moduł pozwala zorientować się w momencie nadawania, że przesyłka dla danego zamówienia została już utworzona. Przydatne np. gdy kilka osób jednocześnie szykuje zamówienia na różnych komputerach. Pozwala to uniknąć sytuacji gdy zostaną wygenerowane dwie etykiety. Moduł sprawdza w momencie kliknięcia przycisku "Nadaj etykietę", czy do danego zamówienia został przypisany jakiś numer przesyłki. Jeśli tak jest, to na stronie pojawi się komunikat
+Ten moduł pozwala zorientować się w momencie nadawania, że przesyłka dla danego zamówienia została już utworzona. Przydatne np. gdy kilka osób jednocześnie szykuje zamówienia na różnych komputerach. Pozwala to uniknąć sytuacji gdy zostaną wygenerowane dwie etykiety. Moduł sprawdza w momencie kliknięcia przycisku "Nadaj etykietę", czy do danego zamówienia został przypisany jakiś numer przesyłki. Jeśli tak jest, to na stronie pojawi się komunikat w postaci okna
 
-![Alt text](assets/shipment_exists_warning.png)
+![Alt text](assets/shipment_exists_warning.png)  
+oraz na dole strony w postaci wiadomości
+
+![Alt text](assets/shipment_exists_warning_message.png)
+
+Przycisk "Zapisz" nie będzie jednak zablokowany - czasami zdarzają się sytuacje że się nadać ponowną przesyłkę (np. dosyłając brakujący produkt), tak więc dalej jest taka możliwość.
 
 Jeśli do danego zamówienia nie ma jeszcze wprowadzonego numeru przesyłki, to przycisk "Zapisz" zmieni kolor na zielony - informując tym samym, że moduł dokonał sprawdzenia i nie znalazł żadnego numeru.
 
@@ -449,9 +454,20 @@ Jeśli do danego zamówienia nie ma jeszcze wprowadzonego numeru przesyłki, to 
 
 Ponieważ sprawdzanie numeru przesyłki odbywa się w momencie kliknięcia "Nadaj przesyłkę", nie uchroni to przed sytuacją, gdy np. na dwóch komputerach otworzysz stronę nadawania przesyłki, przez parę minut będziesz ją szykował po czym klikniesz "Zapisz". Najlepiej zamawiać przesyłkę klikając "Nadaj przesyłkę" w momencie gdy ma się zamiar wydruku etykiety.
 
-Jeśli korzystasz z modułu "Automatyczne pobieranie i drukowanie etykiet adresowych" możesz jednak uniknąć i tej sytuacji, gdyż w memencie kliknięcia przycisku "Zapisz i pobierz" nastąpi dodatkowe sprawdzenie obecności numeru przesyłki. W razie gdy zostanie on znaleziony, dalsze czynności zapisywania, pobierania i drukowania etykiety zostaną przerwane.
+Jeśli korzystasz z modułu "Automatyczne pobieranie i drukowanie etykiet adresowych" możesz jednak uniknąć i tej sytuacji, gdyż w memencie kliknięcia przycisku "Zapisz i drukuj" nastąpi dodatkowe sprawdzenie obecności numeru przesyłki. W razie gdy zostanie on znaleziony, dalsze czynności zapisywania, pobierania i drukowania etykiety zostaną przerwane.
 
 ![Alt text](assets/shipment_exists_warning.gif)
+
+Oprócz tego moduł sprawdza, czy zamówienie nie zostało anulowane. Informacja o anulowaniu zamówienia jest widoczna zarówno na liście zamówień jak i przychodzi mailowo, jednak jeśli masz otwartą listę zamówień szykując przesyłki a kupujący anuluje zamówienie później, gdy już miałeś otwartą stronę, to bez odświeżenia listy zamówień ta informacja nie pojawi się na stronie. Po kliknięciu przycisku "Nadaj przesyłkę" również nie będzie takiej informacji.
+
+Podobnie jak przy sprawdzaniu czy istnieje numer przesyłki, tak dla anulowanego zamówienia pojawi się komunikat w postaci okna
+
+![Alt text](assets/order_cancelled_warning.png)  
+oraz na dole strony w pojawi się wiadomość
+
+![Alt text](assets/order_cancelled_warning_message.png)
+
+Tym razem jednak przycisk "Zapisz" będzie miał kolor czerwony i nie będzie można go kliknąć. Sprawdzanie czy zamówienie jest anulowane odbywa się w tym samym momencie jak opisano wyżej dla sprawdzania numeru przesyłki. 
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 <br>  
