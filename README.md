@@ -494,6 +494,26 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, alle
 <br>  
 <br> 
 
+### Pokazuj statystyki kupujących
+
+Ten moduł pokazuje na stronie "Zamówienia" w sekcji "Kupujący" ile razy dany kupujący dokonał zakupu, na jaką kwotę, ile razy wykonał zwrot, na jaką kwotę. 
+
+![Alt text](assets/buyer_stats.gif)
+
+Brane są pod uwagę zrealizowane zamówienia z ostatniego roku (taki okres oferuje wyszukiwarka zamówień na Allegro), zamówienia nieopłacone lub anulowane nie są uwzględniane. Statystyki dla danego kupującego są pobierane, wyświetlane i zapisywane w bazie danych w momencie wyświetlenia zamówienia na stronie (przy przewijaniu listy zamówień, gdy będzie ono widoczne na ekranie), z małym wyprzedzeniem (aby nie było opóźnienia w ich wyświetlaniu). Pozwala to uniknąć niepotrzebnego ponownego sprawdzania wszystkich kupujących będących na stronie listy zamówień po samym tylko otwarciu strony.
+
+Po najechaniu kursorem na tekst "zamówienia" lub "zwroty" pojawi się bardziej szczegółowa ich lista - z datą i kwotą.
+
+![Alt text](assets/buyer_stats_popup_shown.png)
+
+Zamówienia starsze niż rok nie zostaną znalezione, jednak po upływie czasu jeśli będą istnieć w bazie - zostaną uwzględnione. W ten sposób można zbudować historię z okresu dłuższego niż rok. Jeśli chcesz, możesz zbudować początkową bazę z okresu ostatniego roku, zawierającą wszystkie zamówienia i zwroty z tego okresu, aby te informacje nie przepadły. W tym celu na stronie opcji rozszerzenia kliknij przycisk "Zbuduj bazę". Proces ten zajmie trochę czasu, w zależności od liczby zamówień i zwrotów. Każdy krok paska postępu oznacza pobranie i przetworzenie zamówień z jednego dnia.
+
+![alt text](assets/buyer_stats_options_page.png)
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
+<br>  
+<br> 
+
 ### Zmień grupowo dodatkowe informacje od sprzedającego
 
 Ten moduł pozwala na grupową zmianę pola "Dodatkowe informacje od sprzedającego" we wszystkich aukcjach. Włącz ten moduł za każdym razem gdy chcesz go użyć, jego stan nie będzie zapisywany. Ponieważ moduł ten nie jest uruchamiany w kontekście strony musisz wskazać czy chcesz dokonać zmiany w normalnym serwisie Allegro czy w serwisie testowym Sandbox.
