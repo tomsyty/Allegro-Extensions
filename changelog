@@ -16,3 +16,5 @@
  - Ograniczono sprawdzanie dostępności aktualizacji do nie częściej niż raz na 24h
 [2025-04-13] v1.0.7
  - Do modułu "Ostrzegaj przed ponownym wygenerowaniem etykiety" dodano nową funkcjonalność - sprawdzanie czy zamówienie nie zostało anulowane
+[2025-04-26] v1.0.8
+- Dodano nowy moduł "Pokazuj statystyki kupujących"
