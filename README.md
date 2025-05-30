@@ -317,6 +317,9 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 
 ### Zmiana tytułu aukcji na liście ofert
 
+> [!NOTE]
+> Główna funkcjonalność tego modułu została niedawno zaimplementowana na Allegro, można jednak używać go w dalszym ciągu aby poszerzyć kolumnę z tytułem aukcji.
+
 Pozwala zmienić tytuł aukcji bezpośrednio na liście ofert bez konieczności przechodzenia przez formularz edycji. Przydatne zwłaszcza gdy chcesz zmienić wiele tytułów aukcji w krótkim czasie lub znajdziesz błąd w tytule i chcesz szybko go poprawić. Oprócz tego poszerza trochę kolumnę z tytułem aukcji aby nie skracało tekstu gdy tytuł ten jest bardzo długi, zbliżony do maksymalnego limitu znaków.
 
 ![Alt text](assets/change_auctions_title.gif)
