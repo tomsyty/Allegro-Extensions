@@ -318,7 +318,7 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read``
 ### Zmiana tytułu aukcji na liście ofert
 
 > [!NOTE]
-> Główna funkcjonalność tego modułu została niedawno zaimplementowana na Allegro, można jednak używać go w dalszym ciągu aby poszerzyć kolumnę z tytułem aukcji.
+> Główna funkcjonalność tego modułu została niedawno zaimplementowana na Allegro, można jednak używać go w dalszym ciągu aby poszerzyć kolumnę z tytułem aukcji. 
 
 Pozwala zmienić tytuł aukcji bezpośrednio na liście ofert bez konieczności przechodzenia przez formularz edycji. Przydatne zwłaszcza gdy chcesz zmienić wiele tytułów aukcji w krótkim czasie lub znajdziesz błąd w tytule i chcesz szybko go poprawić. Oprócz tego poszerza trochę kolumnę z tytułem aukcji aby nie skracało tekstu gdy tytuł ten jest bardzo długi, zbliżony do maksymalnego limitu znaków.
 
@@ -496,6 +496,103 @@ Znaczenie poszczególnych kolorów:
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, allegro:api:shipments:read, allegro:api:shipments:write``
 <br>  
 <br> 
+
+### Kontroluj parametry produktowe
+
+Ten moduł pozwala zorientować się że w produkcie podpiętym do aukcji dokonano zmiany. W razie jej wykrycia na liście aukcji w kolumnie "Katalog Allegro" pojawi się link "zmiany w produkcie", po wskazaniu którego wyświetli się okno ze szczegółami zmiany.  
+Moduł może działać automatycznie co określony okres czasu (1 - 24 godziny) sprawdzając aukcje w tle - przy włączonej przeglądarce, nie musi być uruchomiona strona Sales Center. W razie wykrycia zmian w systemowym centrum powiadomień pojawi się informacja o wykryciu zmian i ich liczbie a w oknie przy ikonie rozszerzenia pojawi się lista aukcji w których dokonano zmian w produktach. Po ich kliknięciu otworzy się strona z daną aukcją w Sales Center, gdzie po wskazaniu linku "zmiany w produkcie" będzie można zapoznać się z tymi zmianami.
+
+![Alt text](assets/parameters_watcher_sample_change.png)
+
+Wykrywane są następujące zmiany:
+ - zmiana nazwy produktu
+ - zmiana liczby obrazków
+ - dodanie / usunięcie obrazków
+ - zmiana liczby parametrów
+ - dodanie / usunięcie / zmiana parametrów
+
+Jest jeden wyjątek w raportowaniu - nie zostanie uznane za zmianę gdy przy pobieraniu obrazków nie zostanie pobrany żaden obrazek. Może dojść do sytuacji że ktoś usunie wszystkie obrazki z produktu (mało prawdopodobne, jeżeli są już jakieś obrazki, to raczej jakiś musi zostać). Ten wyjątek spowodowany jest tym że Allegro czasami nie zwraca obrazków przy pobieraniu produktu, nie zwraca też błędu. Po prostu zdarza się że występuje tymczasowy problem z serwerem zdjęć i aby uniknąć ogromnej liczby powiadomień o braku obrazka wprowadziłem ten wyjątek.  
+
+W okienku zmian po najechaniu na link obrazka wyświetlana jest miniaturka, po kliknięciu można wyświetlić obraz w pełnym rozmiarze.  
+
+![Alt text](assets/parameters_watcher.gif)
+
+Jeśli uznamy że zgadzamy się ze zmianami, należy kliknąć "zapisz zmiany" w wyświetlanym oknie zmian dotyczącym konkretnej oferty, aby nie otrzymywać kolejnych powiadomień. Jeśli nie, trzeba zgłosić zmianę parametrów produktu i czekać na jej akceptację, w międzyczasie informacje o zmianach będą pojawiać się za każdym razem. 
+
+Aby było co porównywać moduł musi najpierw pobrać listę produktów i ich parametrów i zapisać ją w bazie. W tym celu można kliknąć przycisk "Zbuduj bazę". Jeśli korzystasz z automatycznego sprawdzania produktów w tle nie jest to wymagane, zostaną one zapisane przy pierwszym sprawdzaniu. Podobnie jest z nowo dodanymi ofertami - jeśli szczegóły dotyczące produktu nie są jeszcze zapisane w bazie, to będą, przy pierwszym wyświetleniu oferty na liście "Mój asortyment" w Sales Center lub przy najbliższym automatycznym pobieraniu.  
+
+![Alt text](assets/parameters_watcher_settings.png)
+
+Ponieważ akcja w tle jest inicjowana bez konieczności wchodzenia na stronę Sales Center, rozszerzenie musi wiedzieć czy ma sprawdzać zmiany w normalnym serwisie (domyślnie) czy w serwisie testowym, jeśli chcesz sprawdzić działanie w serwisie testowym, zmień to w ustawieniach.
+
+Po włączeniu opcji automatycznego sprawdzania w tle ikonka rozszerzenia będzie miała dodany symbol zegarka, informując że jest ustawiony alarm. Pierwsze sprawdzenie nastąpi w najbliższej pełnej minucie (lub następnej jeśli zostało mniej niż 30 sekund). Kliknięcie lewym przyciskiem na ikonę rozszerzenia nie będzie wtedy wyświetlać domyślnie ustawień rozszerzenia, lecz okno z wynikami działania i przyciskami pozwalającymi wykonać sprawdzenie na żądanie, odłożyć sprawdzanie o godzinę lub zatrzymać (jeśli jest w trakcie). Gdy sprawdzanie jest w trakcie, ikona pokazuje scrollujący tekst "PW...%" informujący o postępie sprawdzania. Opcje rozszerzenia można wyświetlić przy użyciu pozostałych sposobów (kliknięcie prawym przyciskiem myszy ikony rozszerzenia i wybranie "Opcje", trzykropek na liście rozszerzeń po kliknięciu ikony puzzla i "Opcje" lub na stronie listy rozszerzeń "szczegóły" - "opcje rozszerzeń"). 
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
+<br>  
+<br>  
+
+### Akcje Erli
+
+Ten moduł pozwala na kopiowanie aukcji do serwisu Erli.pl oraz synchronizację stanów, cen, całych aukcji. Po zaznaczeniu aukcji na Allegro na belce edycji grupowej pojawia się dodatkowe menu "Erli" z opcjami:
+ - Uaktualnij całą aukcję w Erli
+ - Uaktualnij stan magazynowy / cenę / stan aukcji w Erli
+ - Kopiuj do Erli
+
+![Alt text](assets/erli_actions_bar.png)  
+
+Możliwe jest zastosowanie zmian w cenach produktów na Erli aby były niższe niż w serwisie Allegro, są do wyboru 3 opcje:
+ - obniżka kwotowa (o stałą kwotę)
+ - obniżka procentowa (o stały procent)
+ - obniżka kwotowa w zależności od kwoty (możliwość ustalenia progów cenowych, po przekroczeniu których cena obniża się o określoną kwotę)
+
+![Alt text](assets/erli_actions_settings.png)
+
+W ustawieniach wymagane jest podanie tokena Erli - uzyskasz go wybierając w ustawieniach sklepu w sekcji "Metoda integracji" - "Własna integracja API"
+
+![Alt text](assets/erli_actions_integration.png)
+
+Ponadto wymagane jest podanie nazw identyfikatorów ustawień zwrotów, reklamacji, gwarancji i cennika dostawy z ustawień sklepu Erli
+
+![Alt text](assets/erli_actions_returns_obligatory_optional.png)   
+![Alt text](assets/erli_actions_price_list_name.png)  
+
+Moduł jak większość można przetestować w środowisku Sandbox, domyślnie działanie wykonywane na Allegro Sandbox będzie synchronizować działanie z Erli Sandbox, ponadto jest dodatkowa opcja "Zawsze synchronizuj z Erli Sandbox". Jej zaznaczenie pozwoli synchronizować działanie z normalnego Allegro z serwisem testowym Erli Sandbox, dzięki czemu można np. skopiować rzeczywiste aukcje (bez potrzeby wcześniejszego ich tworzenia w serwisie Allegro Sandbox) bezpośrednio na konto testowe w Erli Sandbox.
+
+Kopiowanie aukcji dotyczy tylko samego prostego kopiowania - bez tworzenia ofert wielowariantowych, zestawów, rabatów itp. Ponadto ze względu na występujące czasami różnice w kategoriach w serwisach Allegro i Erli, nie zawsze skopiowane aukcje będą miały przypisaną kategorię - będą wtedy nieaktywne, wymagana będzie ich edycja w Erli i przypisanie właściwych kategorii. Podobnie ma się rzecz z parametrami - czasami w serwisie Erli mogą być wymagane dodatkowe, których nie ma na Allegro, trzeba wtedy dokonać edycji aukcji w Erli aby mogła być aktywna i kupowalna.
+
+Podczas kopiowania producenci i osoby odpowiedzialne są kopiowane do serwisu Erli automatycznie, nie ma potrzeby ich wcześniejszego tworzenia.
+
+Kopiowane są następujące elementy:
+- opis
+- zdjęcia
+- kategoria (nie zawsze uda się przypisać odpowiednią - może być wymagana ręczna edycja, da się grupowo)
+- tytuł
+- cena (z opcjonalną zmianą jak opisano wcześniej)
+- stan magazynowy
+- stan aukcji (aktywna / zakończona)
+- EAN (tylko pierwszy)
+- parametry (w serwisie Erli mogą być dodatkowe obowiązkowe parametry których nie ma w Allegro - może być wymagana ręczna edycja)
+- czas realizacji
+- typ faktury
+- stawka VAT
+- producent odpowiedzialny
+- osoba odpowiedzialna
+
+![Alt text](assets/erli_actions.gif)
+
+Moduł jest kompatybilny z innymi modułami takimi jak:
+ - Pokazuj stan magazynowy i nazwę produktu na liście zamówień (edycja liczby przedmiotów bezpośrednio z poziomu listy zamówień zsynchronizuje również stan w Erli)  
+ ![Alt text](assets/erli_actions_update_from_orders_list.gif)
+ - Szybka zmiana liczby przedmiotów (edycja liczby sztuk na stronie "Mój asortyment" dokonana w sposób który oferuje ten moduł zsynchronizuje również stan w Erli)  
+ ![Alt text](assets/erli_actions_fast_stock_manager.gif)
+ - Przywracanie przedmiotów z anulowanego zamówienia (przywrócenie zsynchronizuje również stan w Erli)  
+ ![Alt text](assets/erli_actions_restore_cancelled.gif)
+ - Przywracanie przedmiotów z listy zwrotów (przywrócenie zsynchronizuje również stan w Erli)  
+ ![Alt text](assets/erli_actions_restore_returned.gif)
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
+<br>
+<br>
 
 ### Pokazuj statystyki kupujących
 
