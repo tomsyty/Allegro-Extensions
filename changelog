@@ -23,3 +23,7 @@
 - Poprawiono błąd uniemożliwiający jednoczesne załadowanie modułów "Pokazuj statystyki kupujących" i "Pokazuj status przesyłek"
 [2025-06-11] v1.1.0
 - Dostosowano do ostatnich zmian moduł "Szybkie wysyłanie nowej wiadomości do kupującego"
+[2025-07-07] v1.1.1
+- Dostosowano do ostatnich zmian moduły "Zmiana tytułu aukcji na liście ofert", "Szybka zmiana liczby przedmiotów", "Pokazuj nazwę produktu i jego ocenę na liście ofert"
+- Dodano nowy moduł "Akcje Erli" - pozwalający na kopiowanie aukcji do serwisu Erli jak i synchronizację cen, stanów, treści aukcji pomiędzy Allegro a Erli
+- Dodano nowy moduł "Kontroluj parametry produktowe" pozwalający na sprawdzanie czy w produktach podpiętych do aukcji zaszły jakieś zmiany
