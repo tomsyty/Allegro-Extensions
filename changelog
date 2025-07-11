@@ -27,3 +27,6 @@
 - Dostosowano do ostatnich zmian moduły "Zmiana tytułu aukcji na liście ofert", "Szybka zmiana liczby przedmiotów", "Pokazuj nazwę produktu i jego ocenę na liście ofert"
 - Dodano nowy moduł "Akcje Erli" - pozwalający na kopiowanie aukcji do serwisu Erli jak i synchronizację cen, stanów, treści aukcji pomiędzy Allegro a Erli
 - Dodano nowy moduł "Kontroluj parametry produktowe" pozwalający na sprawdzanie czy w produktach podpiętych do aukcji zaszły jakieś zmiany
+[2025-07-11] v1.1.2
+- Dostosowano do ostatnich zmian moduł "Wypełnianie wagi i wielkości przesyłki". Można ustawić wagę na 0 aby korzystać z sugerowanej przez Allegro wagi.
+- Ulepszono wyświetlanie okna z listą zmian w module "Kontroluj parametry produktowe".
