@@ -234,7 +234,10 @@ Nazwa metody dostawy musi być dokładnie tą nazwą, która widnieje w formular
 
 Przy nadawaniu do pól wstawiane są wartości domyśłne (lub zaznaczana jest domyślna opcja). Aby wstawić inne wartości, kliknij nazwę szablonu. Aby ustawić dany szablon jako domyślny, możesz kliknąć i przytrzymać daną nazwę szablonu (lub wybieralną opcję) aż podświetli się na zielono. Możesz też zmienić to w ustawieniach zaznaczając odpowieni szablon (opcję) i klikając "Zapisz".
 
-![Alt text](assets/autofill_package_size_change_default_template.gif)
+![Alt text](assets/autofill_package_size_change_default_template.gif)  
+
+Allegro wprowadziło w dn. 08.07.2025 r. podpowiadanie wagi przesyłki oparte na AI, zmieniając też trochę layout strony. Moduł został zaktualizowany do nowego layoutu. Gify prezentujące działanie modułu przedstawiają jeszcze stary wygląd, możliwe że coś się wkrótce zmieni tak więc póki co nie aktualizuję dokumentacji w tym zakresie. Jeśli chcesz korzystać z podpowiadania oferowanego przez Allegro - ustaw wagę na 0.
+
 <br>  
 <br>  
 
