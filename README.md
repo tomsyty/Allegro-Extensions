@@ -385,6 +385,9 @@ Po kliknięciu przycisku "Decyzja zwrotowa" na liście przedmiotów do zwrotu zo
 
 Po zaznaczeniu przedmiotów wskaż decyzję zwrotową i dokonaj zwrotu.
 
+> [!NOTE]
+> Od pewnego czasu Allegro automatycznie zaznacza już przedmioty które klient wybrał jako przeznaczone do zwrotu, wraz z uwzględnieniem liczby zwracanych sztuk. Jedna z funkcjonalności tego modułu nie jest już więc potrzebna (zaznaczanie przedmiotów przeznaczonych do zwrotu i liczby sztuk), dlatego została już wyłączona, to co zaznacza się na tej liście jest już zaznaczane przez Allegro.
+
 Jeśli korzystasz z serwisu iFirma, jest dodatkowy plus ze stosowania tego modułu. Dla zamówień zwróconych należy wypełnić w tym serwisie protokół zwrotu. Aby zautomatyzować ten proces, możesz zaznaczyć na stronie opcji rozszerzenia opcję "Uzupełniaj pola "Pozycje" na stronie protokołu anulowania sprzedaży w serwisie iFirma". Dzięki temu lista przedmiotów do zwrotu wraz z liczbą sztuk i ceną pojawi się na stronie protokołu anulowania sprzedaży. W tym celu najpierw otwórz stronę iFirma i przejdź do protokołu anulowania sprzedaży, następnie kliknij na liście zwrotów w Allegro dodatkowy przycisk "Protokół anulowania"
 
 ![Alt text](assets/restore_returned_return_protocol.png)
