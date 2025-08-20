@@ -30,3 +30,7 @@
 [2025-07-11] v1.1.2
 - Dostosowano do ostatnich zmian moduł "Wypełnianie wagi i wielkości przesyłki". Można ustawić wagę na 0 aby korzystać z sugerowanej przez Allegro wagi.
 - Ulepszono wyświetlanie okna z listą zmian w module "Kontroluj parametry produktowe".
+[2025-08-21] v1.1.3
+- Kolejne ulepszenia wyświetlania okna z listą zmian w module "Kontroluj parametry produktowe"
+- Dostosowano do ostatnich zmian moduł "Przywracanie przedmiotów z listy zwrotów"
+- Dostosowano rozszerzenie do nadchodzących zmian w API dotyczących pobierania tokenów dostępowych.
