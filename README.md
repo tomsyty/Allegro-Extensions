@@ -600,6 +600,24 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read`
 <br>
 <br>
 
+### Dodatkowe akcje grupowe
+
+Ten moduł dodaje do paska opcji grupowych wyświetlanego po zaznaczeniu ofert na stronie "Mój asortyment" podmenu z dodatkowymi opcjami.
+
+![Alt text](assets/additional_actions_change_preorder_and_listing_date.png)
+
+Obecnie są to zmiana daty przedsprzedaży oraz zmiana daty wystawienia aukcji. Zmiana daty przedsprzedaży możliwa jest zarówno dla aukcji trwających jak i zakończonych, zmiana daty wystawienia tylko dla aukcji zaplanowanych do wystawienia.
+
+Aby dokonać zmiany należy najpierw wybrać datę wybierając opcję "Wybierz datę wystawienia aukcji / rozpoczęcia wysyłki". Data musi być datą przyszłą. Wybranie obecnego dnia i zastosowanie go w przypadku aukcji które miały ustawioną datę przedsprzedaży w przyszłości spowoduje usunięcie tej informacji na stronie aukcji (czyli wyłączenie przedsprzedaży - rozpoczęcie wysyłki). Godzina nie ma tutaj znaczenia - liczy się tylko dzień.
+
+![Alt text](assets/additional_actions_change_preorder_and_listing_date.gif)
+
+Możesz zaznaczyć wiele aukcji np. korzystając z opcji "zaznacz wszystkie", jednak nie wszystkie zaznaczone aukcje będą przetworzone w jednym cyklu. Spowodowane jest to tym, iż Allegro korzysta z tzw. Intersections Observer API, które ładuje oferty na stronę w momencie przewijania listy (i kilka z wyprzedzeniem żeby zachować płynność pojawiania się ofert na ekranie). Oferty które przestają być widoczne na ekranie po przewinięciu są jednak usuwane z tabeli, dlatego też tak naprawdę w danym momencie w tabeli jest tylko kilkanaście ofert (w zależności od rozdzielczości ekranu mniej lub więcej) niezależnie od wybranej opcji pokazywania liczby ofert na stronie. Jednorazowo możliwe jest więc tylko wykonanie akcji na aukcjach widocznych w danym momencie na ekranie, jednak na szczęście zaznaczenie jest zapamiętywane przez Allegro, tak więc wystarczy przewinąć stronę i kontynuować operację klikając daną akcję ponownie. Przetworzone aukcje są odznaczane z zaznaczenia.
+
+Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:offers:read, allegro:api:offers:write``
+<br>  
+<br> 
+
 ### Pokazuj statystyki kupujących
 
 Ten moduł pokazuje na stronie "Zamówienia" w sekcji "Kupujący" ile razy dany kupujący dokonał zakupu, na jaką kwotę, ile razy wykonał zwrot, na jaką kwotę. 
