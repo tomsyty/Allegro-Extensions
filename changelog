@@ -34,3 +34,6 @@
 - Kolejne ulepszenia wyświetlania okna z listą zmian w module "Kontroluj parametry produktowe"
 - Dostosowano do ostatnich zmian moduł "Przywracanie przedmiotów z listy zwrotów"
 - Dostosowano rozszerzenie do nadchodzących zmian w API dotyczących pobierania tokenów dostępowych.
+[2025-09-14] v1.1.4
+- Dodano nowy moduł "Dodatkowe opcje grupowe". Obecnie pozwala on na zmianę daty przedsprzedaży lub daty wystawienia aukcji.
+- Zaktualizowano metody dostawy dla modułu "Wypełnianie wagi i wielkości przesyłki" z uwzględnieniem usuniętych przed kilkoma dniami metod UPS.
