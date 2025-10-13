@@ -37,3 +37,5 @@
 [2025-09-14] v1.1.4
 - Dodano nowy moduł "Dodatkowe opcje grupowe". Obecnie pozwala on na zmianę daty przedsprzedaży lub daty wystawienia aukcji.
 - Zaktualizowano metody dostawy dla modułu "Wypełnianie wagi i wielkości przesyłki" z uwzględnieniem usuniętych przed kilkoma dniami metod UPS.
+[2025-10-13] v1.1.5
+- Poprawiono automatyczne wypełnianie wymiarów przesyłek które przestało działać po ostatnich zmianach na Allegro poprzez wydłużenie czasu między uzupełnianiem kolejnych pól formularza. Będę jeszcze pracował nad znalezieniem innego sposobu i skróceniem tego czasu aby działało to trochę szybciej. 
