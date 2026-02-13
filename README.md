@@ -64,76 +64,52 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	9. Kliknij przycisk "Tak, powiąż konto". Jeśli chiałbyś usunąć powiązanie aplikacji z kontem zrobisz to na stronie Allegro - Moje Allegro - Konto - Bezpieczeństwo - [Powiązane aplikacje](https://allegro.pl/moje-allegro/moje-konto/powiazane-aplikacje)
 	10. Na stronie opcji rozszerzenia pojawi się komunikat o zalogowaniu wraz z nazwą użytkownika.  
 	</details>
+
+	Rozszerzenie możesz sprawdzić w serwisie testowym [Allegro Sandbox](https://developer.allegro.pl/tutorials/informacje-podstawowe-b21569boAI1#srodowisko-testowe).  
+
+	<details>
+	<summary>Instrukcja rejestracji aplikacji dla serwisu testowego</summary>
+	
+	1. Otwórz stronę [developer.allegro.pl](https://developer.allegro.pl/).
+	2. Kliknij "Zarządzaj API" - "Moje aplikacje (sandbox)". Upewnij się że zalogowany jesteś na konto Allegro Sandbox w ramach którego działać będzie aplikacja. Jeśli nie, wyloguj się (klikając ikonę obok nazwy użytkownika i wybierz "Wyloguj") a następnie zaloguj się na właściwe konto.
+	3. Kliknij przycisk "Zarejestruj aplikację".  
+	4. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
+		- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
+		- **Wybierz rodzaj aplikacji:** zaznacz pierwszą opcję - "Aplikacja ma dostęp do przeglądarki, w której użytkownik loguje się do Allegro (np. aplikacja na serwerze albo plik wykonywalny)"  
+
+			![Alt text](assets/allegro_application_type_code_flow.png)
+		- **Ścieżka aplikacji:** na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Ścieżka aplikacji**. Jest to unikalny adres aplikacji w domenie chromiumapp.org pod który Allegro będzie przesyłać kod autoryzujący i tokeny dostępowe.
+		- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
+
+			Na stronie opcji rozszerzenia przyznane już uprawnienia oznaczone są zielonym kolorem. Jeżeli jakieś uprawnienia nie zostały przyznane, oznaczone będą one czerwonym kolorem.  
+
+			![Alt text](assets/options_page_scopes.png)
+			Uprawnienia dotyczące zwykłego serwisu Allegro określa kolorowa czcionka. Podkreślenie oznacza uprawnienia dla serwisu testowego Sandbox. Jeśli nie korzystasz z niego, wszystkie uprawnienia będą miały czerwone podkreślenie.
+			
+			Jeżeli w momencie włączania modułu nie masz przyznanych uprawnień - pojawi się powiadomienie
+
+			![Alt text](assets/options_page_scopes_not_granted_warning.png)
+
+			Musisz wtedy edytować zarejestrowaną aplikację na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczyć wymagane uprawnienia. Po dokonaniu tej czynności trzeba ponownie kliknąć przycisk Zaloguj na stronie opcji rozszerzenia.
+
+		- Zaznacz `* Znam i akceptuję regulamin REST API Allegro`.
+		- Kliknij przycisk "Zarejestruj".
+		- Na koncie możesz mieć do 5 zarejestrowanych aplikacji. Jeżeli chciałbyś ją usunąć zrobisz to na tej samej stronie.
+	5. Aplikacja zostanie zarejestrowana. Kliknij "Szczegóły" aby odczytać Client ID i Client Secret. Zaznacz i skopiuj parametr Client ID, wklej go na stronie opcji rozszerzenia w polu Client ID. Kliknij "Pokaż" przy parametrze Client Secret, aby odsłonić domyślnie zamaskowaną wartość tego parametru, zaznacz i skopiuj parametr Client Secret, wklej go na stronie opcji rozszerzenia w polu Client Secret. Zamknij okno ze szczegółami aplikacji.
+	6. Kliknij "Zapisz" a następnie "Zaloguj" na stronie opcji rozszerzenia. Zostaniesz przeniesiony na stronę Allegro gdzie musisz potwierdzić że kontynuujesz jako zalogowany użytkownik  
+		
+		![Alt text](assets/allegro_confirm_account_dialog.png)
+	7. Kliknij przycisk "Kontynuuj".
+	8. Zostaniesz przeniesiony na stronę Allegro z pytaniem czy chcesz powiązać swoje konto z aplikacją  
+	
+		![Alt text](assets/allegro_account_linking_question_allegro-api-sale-offers-read,allegro-api-sale-offers-write,allegro-api-sale-orders-read,allegro-api-sale-orders-write,allegro-api-profile-read.png)
+	9. Kliknij przycisk "Tak, powiąż konto". Jeśli chiałbyś usunąć powiązanie aplikacji z kontem zrobisz to na stronie Allegro - Moje Allegro - Konto - Bezpieczeństwo - [Powiązane aplikacje](https://allegro.pl.allegrosandbox.pl/moje-allegro/moje-konto/powiazane-aplikacje)
+	10. Na stronie opcji rozszerzenia pojawi się komunikat o zalogowaniu wraz z nazwą użytkownika.  
+</details>  
+
 7. Jeżeli miałeś otwartą stronę Sales Center, odśwież ją, celem załadowania rozszerzenia. Sporadycznie może zdarzyć się, że rozszerzenie nie załaduje się przy wejściu na stronę Sales Center, najlepiej wtedy odświeżyć stronę (<kbd>Ctrl</kbd> + <kbd>F5</kbd>), ewentualnie załadować ponownie rozsrzerzenie  
 ![Alt text](assets/chrome_reload_extension.png)  
 po czym koniecznie musisz odświeżyć wszystkie otwarte karty Sales Center (lub zamknąć je i otworzyć od nowa).
-
-Rozszerzenie możesz sprawdzić w serwisie testowym [Allegro Sandbox](https://developer.allegro.pl/tutorials/informacje-podstawowe-b21569boAI1#srodowisko-testowe).  
-<details>
-<summary>Instrukcja rejestracji aplikacji dla serwisu testowego</summary>
-
-Uzyskanie danych dostępowych dla serwisu testowego jest trochę bardziej skomplikowane niż dla normalnego Allegro. Powodem jest to że rozszerzenie nie może uzyskać tokenów dostępowych w taki sam sposób, choć jakiś czas temu było to jeszcze możliwe więc zmiana zaszła albo po stronie Allegro albo przy którejś wersji Chrome. Kontaktowałem się z obsługą na stronie GitHub Allegro jednak oni nie widzą problemu, poza tym nie wspierają konkretnych języków programowania a ponieważ raczej nikt nie pisze rozszerzeń do przeglądarki Chrome działających z Allegro tylko tworzy się serwisy lub zewnętrzne aplikacje działające w inny sposób i tam ten problem nie występuje to nie będą drążyć tematu.
-
-Trzeba było więc sobie jakoś z tym poradzić więc stworzyłem zewnętrzną aplikację pośredniczącą w uzyskiwaniu tokenów dostępowych do serwisu Allegro Sandbox. Zdaję sobie sprawę że nie każdy posiada serwer z obsługą Node.js dlatego działa ona jako aplikacja w ramach konta Google które większość osób i tak posiada albo może bez problemu założyć.
-
-1. Przejdź na stronę [script.google.com](https://script.google.com/).
-2. Kliknij "Ustawienia" - "Google Apps Script API" - włącz.
-3. Kliknij "Nowy projekt". Otworzy się edytor domyślnego pliku "Kog.gs". Zmień nazwę projektu z "Projekt bez nazwy" na np. "Allegro".
-4. Otwórz plik "Kod.js" z listy plików na górze tej strony i skopiuj jego zawartość.
-5. Usuń z edytora obecną zawartość pliku i wklej skopiowany tekst. Zapisz wciskając <kbd>Ctrl</kbd> + <kbd>s</kbd>.
-6. Kliknij "Wdróż" - "Nowe wdrożenie".
-7. Kliknij ikonę kółka zębatego i wybierz "Aplikacja internetowa". Pole "Opis" nie jest wymagane, parametr "Wykonaj jako": "Ja (adres konta Google)", "Kto ma dostęp" zmień na "Każdy". Kliknij "Wdróż"  
-
-	![Alt text](assets/google_deploy_settings.png)
-8. Pojawi się komunikat o konieczności udzielenia dostępu do aplikacji internetowej. Kliknij przycisk "Udziel dostępu", wybierz konto Google, pojawi się kolejny komunikat informujący o tym że aplikacja nie jest zweryfikowana. Kliknij "Zaawansowane", następnie "Otwórz Allegro (niebezpieczne)" (gdzie "Allegro" to nazwa aplikacji nadana wcześniej w edytorze)  
-
-	![Alt text](assets/google_unsafe_warning.png)
-9. W kolejnym komunikacie pojawi się informacja że aplikacja chce uzyskać dostęp do konta Google w zakresie łączenia się z usługą zewnętrzną. Kliknij "Zezwól"  
-
-	![Alt text](assets/google_access_allow.png)
-
-	Jeśli chciałbyś usunąć udzielony dostęp do konta Google zrobisz to w ustawieniach konta, sekcja "Bezpieczeństwo" - "Twoje połączenia z aplikacjami i usługami innych firm".
-10. Na stronie wdrożenia pojawi się komunikat ze szczegółami wdrożenia, z których istotnym parametrem jest link - aplikacja internetowa. Skopiuj go i wklej na stronie opcji rozszerzenia do pola "Adres aplikacji internetowej"  
-
-	![Alt text](assets/google_new_deployment.png)  
-11. Przejdź na stronę [developer.allegro.pl](https://developer.allegro.pl/).
-12. Kliknij "Zarządzaj API" - "Moje aplikacje (sandbox)". Upewnij się że zalogowany jesteś na konto Allegro (sandbox) w ramach którego działać będzie aplikacja. Jeśli nie, wyloguj się (klikając ikonę obok nazwy użytkownika i wybierz "Wyloguj") a następnie zaloguj się na właściwe konto.
-13. Kliknij przycisk "Zarejestruj aplikację".
-14. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
-	- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
-	- **Wybierz rodzaj aplikacji:** zaznacz drugą opcję ("Aplikacja działa w środowisku bez dostępu do przeglądarki lub klawiatury (np. aplikacja konsolowa lub na urządzeniu typu telewizor)")  
-
-		![Alt text](assets/allegro_application_type_device_flow.png)
-	- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
-
-		Na stronie opcji rozszerzenia przyznane już uprawnienia oznaczone są zielonym kolorem. Jeżeli jakieś uprawnienia nie zostały przyznane, oznaczone będą one czerwonym kolorem.  
-
-		![Alt text](assets/options_page_scopes.png)
-		Uprawnienia dotyczące zwykłego serwisu Allegro określa kolorowa czcionka. Podkreślenie oznacza uprawnienia dla serwisu testowego Sandbox.
-		
-		Jeżeli w momencie włączania modułu nie masz przyznanych uprawnień - pojawi się powiadomienie
-
-		![Alt text](assets/options_page_scopes_not_granted_warning.png)
-
-		Musisz wtedy edytować zarejestrowaną aplikację na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczyć wymagane uprawnienia. Po dokonaniu tej czynności trzeba ponownie kliknąć przycisk Zaloguj na stronie opcji rozszerzenia.
-
-	- Zaznacz `* Znam i akceptuję regulamin REST API Allegro`.
-	- Kliknij przycisk "Zarejestruj".
-	- Na koncie możesz mieć do 5 zarejestrowanych aplikacji. Jeżeli chciałbyś ją usunąć zrobisz to na tej samej stronie.
-15. Aplikacja zostanie zarejestrowana. Kliknij "Szczegóły" aby odczytać Client ID i Client Secret. Zaznacz i skopiuj parametr Client ID, wklej go na stronie opcji rozszerzenia w polu Client ID. Kliknij "Pokaż" przy parametrze Client Secret, aby odsłonić domyślnie zamaskowaną wartość tego parametru, zaznacz i skopiuj parametr Client Secret, wklej go na stronie opcji rozszerzenia w polu Client Secret. Zamknij okno ze szczegółami aplikacji.
-16. Kliknij "Zapisz" a następnie "Zaloguj" na stronie opcji rozszerzenia. Zostaniesz przeniesiony na stronę Allegro gdzie musisz wprowadzić kod podany przez aplikację (kod uzupełni się automatycznie)  
-
-	![Alt text](assets/allegro_enter_device_code.png)
-17. Kliknij przycisk "Dalej". Zostaniesz przeniesiony na stronę Allegro gdzie musisz potwierdzić że kontynuujesz jako zalogowany użytkownik  
-
-	![Alt text](assets/allegro_confirm_account_dialog.png)
-18. Kliknij przycisk "Kontynuuj". Zostaniesz przeniesiony na stronę Allegro z pytaniem czy chcesz powiązać swoje konto z aplikacją  
-
-	![Alt text](assets/allegro_account_linking_question_allegro-api-sale-offers-read,allegro-api-sale-offers-write,allegro-api-sale-orders-read,allegro-api-sale-orders-write,allegro-api-profile-read.png)
-19. Kliknij przycisk "Tak, powiąż konto". Jeśli chiałbyś usunąć powiązanie aplikacji z kontem zrobisz to na stronie Allegro - Moje Allegro - Konto - Bezpieczeństwo - [Powiązane aplikacje](https://allegro.pl.allegrosandbox.pl/moje-allegro/moje-konto/powiazane-aplikacje)
-20. Na stronie opcji rozszerzenia pojawi się komunikat o zalogowaniu wraz z nazwą użytkownika.  
-</details>
-
 
 ***
 
@@ -517,7 +493,7 @@ Wykrywane są następujące zmiany:
  - zmiana liczby parametrów
  - dodanie / usunięcie / zmiana parametrów
 
-Jest jeden wyjątek w raportowaniu - nie zostanie uznane za zmianę gdy przy pobieraniu obrazków nie zostanie pobrany żaden obrazek. Może dojść do sytuacji że ktoś usunie wszystkie obrazki z produktu (mało prawdopodobne, jeżeli są już jakieś obrazki, to raczej jakiś musi zostać). Ten wyjątek spowodowany jest tym że Allegro czasami nie zwraca obrazków przy pobieraniu produktu, nie zwraca też błędu. Po prostu zdarza się że występuje tymczasowy problem z serwerem zdjęć i aby uniknąć ogromnej liczby powiadomień o braku obrazka wprowadziłem ten wyjątek.  
+Jest jeden wyjątek w raportowaniu - nie zostanie uznane za zmianę gdy przy pobieraniu obrazków nie zostanie pobrany żaden obrazek. Może dojść do sytuacji że ktoś usunie wszystkie obrazki z produktu (mało prawdopodobne, jeżeli są już jakieś obrazki, to raczej jakiś musi zostać). Ten wyjątek spowodowany jest tym że Allegro czasami nie zwraca obrazków przy pobieraniu produktu, nie zwraca też błędu. Po prostu zdarza się że występuje tymczasowy problem z serwerem zdjęć i aby uniknąć ogromnej liczby powiadomień o braku obrazka wprowadziłem ten wyjątek. Allegro okresowo zmienia serwery na którym przechowywane są obrazki, dlatego aby uniknąć niepotrzebnych powiadomień o dodaniu nowego obrazka i usunięciu starego, moduł sprawdzi czy ich rozmiary w bajtach są takie same, jeśli tak, to znaczy że nastąpiła zmiana serwera obrazka i nie ma potrzeby powiadamiania o tym, zapisane w bazie dane zostaną zaktualizowane w tle. 
 
 W okienku zmian po najechaniu na link obrazka wyświetlana jest miniaturka, po kliknięciu można wyświetlić obraz w pełnym rozmiarze.  
 
