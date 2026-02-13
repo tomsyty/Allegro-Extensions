@@ -39,3 +39,9 @@
 - Zaktualizowano metody dostawy dla modułu "Wypełnianie wagi i wielkości przesyłki" z uwzględnieniem usuniętych przed kilkoma dniami metod UPS.
 [2025-10-13] v1.1.5
 - Poprawiono automatyczne wypełnianie wymiarów przesyłek które przestało działać po ostatnich zmianach na Allegro poprzez wydłużenie czasu między uzupełnianiem kolejnych pól formularza. Będę jeszcze pracował nad znalezieniem innego sposobu i skróceniem tego czasu aby działało to trochę szybciej. 
+[2026-02-14] v1.1.6
+- Poprawiono błąd związany z pierwszym logowaniem API Allegro po instalacji rozszerzenia
+- Logowanie do serwisu testowego Allegro Sandbox odbywa się już w taki sam sposób jak do nornalnego serwisu - jeśli z niego korzystałeś, zarejestruj nową aplikację na stronie deweloperskiej jak opisano na stronie głównej
+- Dostosowano tryb nadawania przesyłek InPost do dwóch opcji po ostatniej zmianie na Allegro (poprzednio były trzy opcje)
+- Poprawiono sposób wyświetlania komunikatów błędów, są one teraz bardziej szczegółowe
+- Moduł "Kontroluj parametry produktowe" będzie teraz pokazywał mniej powiadomień (pominie te o zmianie obrazka w przypadku gdy nie doszło do faktycznej jego zmiany a tylko zmiany adresu serwera a obrazek pozostał ten sam)
