@@ -43,5 +43,6 @@
 - Poprawiono błąd związany z pierwszym logowaniem API Allegro po instalacji rozszerzenia
 - Logowanie do serwisu testowego Allegro Sandbox odbywa się już w taki sam sposób jak do nornalnego serwisu - jeśli z niego korzystałeś, zarejestruj nową aplikację na stronie deweloperskiej jak opisano na stronie głównej
 - Dostosowano tryb nadawania przesyłek InPost do dwóch opcji po ostatniej zmianie na Allegro (poprzednio były trzy opcje)
+- Dostosowano moduł "Pokazuj nazwę produktu na liście ofert" do nowego widoku zakładki "Mój asortyment" w którym można modyfikować kolejność kolumn, poprawiono też wyświetlanie oceny produktu
 - Poprawiono sposób wyświetlania komunikatów błędów, są one teraz bardziej szczegółowe
 - Moduł "Kontroluj parametry produktowe" będzie teraz pokazywał mniej powiadomień (pominie te o zmianie obrazka w przypadku gdy nie doszło do faktycznej jego zmiany a tylko zmiany adresu serwera a obrazek pozostał ten sam)
