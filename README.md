@@ -18,6 +18,7 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 5. Wybierz folder z uprzednio pobranym i rozpakowanym rozszerzeniem.
 6. Po załadowaniu rozszerzenia otworzy się strona jego opcji, gdzie będziesz mógł włączyć poszczególne moduły. Część z nich nie wymaga dostępu do API, są to moduły: 
 	- Zmiana koloru ikony FV
+	- Wyróżnianie wiadomości od kupującego
 	- Automatyczne pobieranie i drukowanie etykiet adresowych
 	- Wypełnianie wagi i wielkości przesyłki
 	- Szybkie przełączanie sposobu nadawania przesyłek InPost
@@ -122,6 +123,14 @@ Służy do zmiany koloru ikony faktury VAT z domyślnego szarego, który nie wyr
 ![Alt text](assets/change_invoice_icon_color_changed.png)
 
 Domyślnie do wyboru jest kilkanaście predefiniowanych kolorów, ale można też wybrać dowolny, przy czym wymagana będzie wtedy dodatkowa czynność - szczegóły po wybraniu koloru spoza palety domyślnych.
+<br>  
+<br> 
+
+### Wyróżnianie wiadomości od kupującego
+
+Służy do wyróżnienia wiadomości od kupującego na liście zamówień w Sales Center dzięki czemu łatwiej ją dostrzec. Do wyboru są 3 opcje: zmiana koloru tekstu, zmiana tła tekstu, obramowanie tekstu. Można wybrać jeden z predefiniowanych kolorów lub dowolny inny.
+
+![Alt text](assets/highlight_message_from_buyer.gif)
 <br>  
 <br> 
 
@@ -474,6 +483,13 @@ Znaczenie poszczególnych kolorów:
 ![Alt text](assets/shipment_status_notice_left.png) - przesyłka awizowana  
 ![Alt text](assets/shipment_status_returned.png) - przesyłka zwrócona  
 ![Alt text](assets/shipment_status_error.png) - problem z przesyłką
+
+Moduł może działać automatycznie co określony okres czasu (1 - 24 godziny) sprawdzając statusy przesyłek w tle - przy włączonej przeglądarce, nie musi być uruchomiona strona Sales Center. W razie wykrycia statusów wymagających uwagi w systemowym centrum powiadomień pojawi się informacja o ich liczbie a w oknie przy ikonie rozszerzenia pojawi się lista przesyłek wraz z nazwą przewoźnika i statusem. Po ich kliknięciu otworzy się strona "Wysyłam z Allegro - Przesyłki i podjazdy" z wybraną przesyłką. Jako wymagające uwagi oznaczane są przesyłki które w najnowszym statusie mają informację o wystąpieniu problemu, awizowaniu, zwrocie lub jeśli pomiędzy informacją o przesyłce gotowej do odbioru a czasem w którym dokonano sprawdzenia minęło więcej niż 24 godziny (lub 48 godzin w przypadku przesyłek Orlen których czas na odbiór wynosi 3 dni a nie 2 dni jak u pozostałych przewoźników).
+
+
+![Alt text](assets/check_shipments_status.gif)
+
+Sprawdzane są przesyłki do 14 dni wstecz. Pierwsze sprawdzanie przesyłek może trwać chwilę dłużej gdyż pobierane są informacje o wszystkich przesyłkach, później jest już szybciej gdyż kolejne sprawdzanie pomija przesyłki które są już doręczone.
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, allegro:api:shipments:read, allegro:api:shipments:write``
 <br>  
