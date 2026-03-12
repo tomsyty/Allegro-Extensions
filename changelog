@@ -46,3 +46,6 @@
 - Dostosowano moduł "Pokazuj nazwę produktu na liście ofert" do nowego widoku zakładki "Mój asortyment" w którym można modyfikować kolejność kolumn, poprawiono też wyświetlanie oceny produktu
 - Poprawiono sposób wyświetlania komunikatów błędów, są one teraz bardziej szczegółowe
 - Moduł "Kontroluj parametry produktowe" będzie teraz pokazywał mniej powiadomień (pominie te o zmianie obrazka w przypadku gdy nie doszło do faktycznej jego zmiany a tylko zmiany adresu serwera a obrazek pozostał ten sam)
+[2026-03-12] v1.1.7
+- Dodano nowy moduł "Wyróżnianie wiadomości od kupującego" który na stronie "Zamówienia" wyróżnia kolorem tekst wiadomości do zakupu
+- Moduł "Pokazuj status przesyłek" zyskał dodatkową funkcjonalność - automatycznej pracy w tle, co pozwala sprawdzać statusy przesyłek bez konieczności wchodzenia na stronę "Wysyłam z Allegro - Przesyłki i podjazdy". Sprawdzanie dotyczy ostatnich 14 dni, dodatkowo informuje gdy od momentu gdy przesyłka jest gotowa do odbioru minęły więcej niż 24 godziny (lub 48 godzin w przypadku przesyłek Orlen)
