@@ -52,5 +52,6 @@
 [2026-04-12] v1.1.8
 - Poprawiono działanie wielu modułów które zostało zakłócone zmianami kodu strony Allegro jakiś czas temu. Głównie dotyczyło to modułów "Zmiana tytułu aukcji na liście ofert", "Szybka zmiana liczby przedmiotów", "Pokazuj nazwę produktu i jego ocenę na liście ofert", "Kontroluj parametry produktowe".
 - Usunięto moduł "Szybkie wysyłanie nowej wiadomości do kupującego" z racji tego że taką funkcjonalność wprowadziło już Allegro.
-- Dodano opcje oznaczania informacji o statusie przesyłki jako przeczytanej w module "Pokazuj status przesyłek" aby informacja niepotrzebnie nie pojawiała się w kolejnych wyszukiwaniach.
+- Dodano opcję oznaczania informacji o statusie przesyłki jako przeczytanej w module "Pokazuj status przesyłek" aby informacja niepotrzebnie nie pojawiała się w kolejnych wyszukiwaniach.
+- Dodano opcję wyszukiwania aukcji po tagach ofertowych w module "Pokazuj tagi ofertowe na liście ofert". Teraz po kliknięciu taga na stronie "Mój asortyment" można wyszukać wszystkie aukcje które posiadają ten tag.
 - Dostosowano rozszerzenie do wymagań wchodzących z końcem czerwca opisanych na stronie aktualności w tym artykule. W przypadku korzystania z funkcjonalności opartych o API, wymagana będzie ponowna rejestracja aplikacji z podaniem unikalnej nazwy widocznej na stronie opcji rozszerzenia
