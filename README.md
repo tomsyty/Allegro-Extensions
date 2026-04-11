@@ -22,7 +22,6 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	- Automatyczne pobieranie i drukowanie etykiet adresowych
 	- Wypełnianie wagi i wielkości przesyłki
 	- Szybkie przełączanie sposobu nadawania przesyłek InPost
-	- Szybkie wysyłanie nowej wiadomości do kupującego
 	- Dodatkowe opcje sortowania zamówień
 
 	Pozostałe moduły korzystają z API, aby ich używać wymagane będzie uzupełnienie danych Client ID i Client Secret. Uzyskasz je rejestrując aplikację na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/)
@@ -33,10 +32,11 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	2. Kliknij "Zarządzaj API" - "Moje aplikacje". Upewnij się że zalogowany jesteś na konto Allegro w ramach którego działać będzie aplikacja. Jeśli nie, wyloguj się (klikając ikonę obok nazwy użytkownika i wybierz "Wyloguj") a następnie zaloguj się na właściwe konto.
 	3. Kliknij przycisk "Zarejestruj aplikację".  
 	4. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
-		- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
+		- **Nazwa aplikacji:**  na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Nazwa aplikacji**  
 		- **Wybierz rodzaj aplikacji:** zaznacz pierwszą opcję - "Aplikacja ma dostęp do przeglądarki, w której użytkownik loguje się do Allegro (np. aplikacja na serwerze albo plik wykonywalny)"  
-
 			![Alt text](assets/allegro_application_type_code_flow.png)
+		- **Cel aplikacji:** zaznacz "Tworzę aplikację tylko na swoje potrzeby"  
+			![Alt text](assets/allegro_application_app_destination.png)
 		- **Ścieżka aplikacji:** na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Ścieżka aplikacji**. Jest to unikalny adres aplikacji w domenie chromiumapp.org pod który Allegro będzie przesyłać kod autoryzujący i tokeny dostępowe.
 		- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl](https://apps.developer.allegro.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
 
@@ -75,10 +75,11 @@ Jeśli pracujesz na wielu komputerach, miej na uwadze że rozszerzenie nie synch
 	2. Kliknij "Zarządzaj API" - "Moje aplikacje (sandbox)". Upewnij się że zalogowany jesteś na konto Allegro Sandbox w ramach którego działać będzie aplikacja. Jeśli nie, wyloguj się (klikając ikonę obok nazwy użytkownika i wybierz "Wyloguj") a następnie zaloguj się na właściwe konto.
 	3. Kliknij przycisk "Zarejestruj aplikację".  
 	4. W formularzu rejestracji aplikacji Allegro podaj następujące dane:
-		- **Nazwa aplikacji:** dowolna, np. "Allegro Extensions"
+		- **Nazwa aplikacji:**  na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Nazwa aplikacji**  
 		- **Wybierz rodzaj aplikacji:** zaznacz pierwszą opcję - "Aplikacja ma dostęp do przeglądarki, w której użytkownik loguje się do Allegro (np. aplikacja na serwerze albo plik wykonywalny)"  
-
 			![Alt text](assets/allegro_application_type_code_flow.png)
+		- **Cel aplikacji:** zaznacz "Tworzę aplikację tylko na swoje potrzeby"  
+			![Alt text](assets/allegro_application_app_destination.png)
 		- **Ścieżka aplikacji:** na stronie opcji rozszerzenia zaznacz i skopiuj tekst widniejący przy parametrze **Ścieżka aplikacji**. Jest to unikalny adres aplikacji w domenie chromiumapp.org pod który Allegro będzie przesyłać kod autoryzujący i tokeny dostępowe.
 		- **Uprawnienia aplikacji:** przy każdym module korzystającym z API podane są wymagane uprawnienia. Zaznacz te z których będziesz korzystać oraz `allegro:api:profile:read` (sekcja **Dane osobowe**). Jeśli już po zalogowaniu włączysz moduł korzystający z dodatkowych uprawnień, nie zaznaczonych wcześniej, będzie wymagana edycja zarejestrowanej aplikacji na stronie [apps.developer.allegro.pl.allegrosandbox.pl](https://apps.developer.allegro.pl.allegrosandbox.pl/) i zaznaczenie tych uprawnień oraz ponowne kliknięcie przycisku "Zaloguj" na stronie opcji rozszerzenia.  
 
@@ -244,22 +245,6 @@ Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy 
 <br>  
 <br>  
 
-### Szybkie wysyłanie nowej wiadomości do kupującego
-
-Dodaje nowy przycisk do menu "akcje" na stronie "zamówienia" oraz na stronie "zwroty" w Wysyłam z Allegro.
-
-![Alt text](assets/send_message_from_orders_page_button.png)
-
-![Alt text](assets/send_message_from_returns_page_button.png)
-
-Kliknięcie tego przycisku otworzy w nowej karcie stronę wysyłania nowej wiadomości z uzupełnionymi polami "Login odbiorcy" oraz "Numer zamówienia".
-
-![Alt text](assets/send_message_from_orders_page.gif)
-
-![Alt text](assets/send_message_from_returns_page.gif)
-<br>  
-<br>  
-
 ### Dodatkowe opcje sortowania zamówień
 
 Dodaje nowe opcje sortowania zamówień. Na obecną chwilę jest to sortowanie według liczby pozycji rosnąco. 
@@ -407,11 +392,21 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read`
 
 ### Pokazuj tagi ofertowe na liście ofert
 
-Moduł ten pokazuje tagi ofertowe na liście ofert pod numerem aukcji. Tagi ofertowe to tagi które możesz utworzyć na Allegro jeżeli masz wykupiony abonament sklepowy. Pozwalają na zdefiniowanie własnych kategorii produktów i przypisanie ich do poszczególnych aukcji, tagi są wyświetlane po kliknięciu "Wszystkie przedmioty sprzedającego" po lewej stronie pod domyślnymi kategoriami zdefiniowanymi przez Allegro.
+Moduł ten pokazuje tagi ofertowe na liście ofert pod numerem aukcji. Tagi ofertowe to tagi które pozwalają na zdefiniowanie własnych kategorii produktów i przypisanie ich do poszczególnych aukcji, tagi są wyświetlane po kliknięciu "Wszystkie przedmioty sprzedającego" po lewej stronie pod domyślnymi kategoriami zdefiniowanymi przez Allegro.
 
 ![Alt text](assets/offer_tags.gif)
 
 Moduł posiada dodatkową opcję "Domyślnie ukrywaj tagi i pokazuj po wciśnięciu skrótu klawiaturowego", po której zaznaczeniu tagi nie będą domyślnie pobierane ani pokazywane, nastąpi to dopiero po wciśnięciu zdefiniowanego skrótu klawiaturowego. Ponowne jego wciśnięcie ukryje tagi.
+
+Oprócz pokazywania tagów moduł pozwala również na filtrowanie aukcji po danym tagu po jego kliknięciu. Dostępne są 3 opcje:  
+- Nie wyszukuj aukcji: brak wyszukiwania, ignoruje kliknięcie tagu
+- Zawsze przeszukuj wszystkie aukcje od nowa: ten tryb przeszukuje wszystkie aukcje pod kątem przypisania do nich klikniętego tagu. Trwa to długo gdyż za każdym razem przeszukiwane są wszystkie aukcje użytkownika, ale uwzględnia zawsze wszystkie dostępne aukcje.  
+![Alt text](assets/show_offer_tags_find_mode_2.gif)
+
+- Korzystaj z utworzonej bazy aukcji: ten tryb przeszukuje tylko aukcje które zostały wcześniej zindeksowane. Trwa to niemal natychmiast gdyż przeszukiwana jest lokalna baza danych. Jeśli dodałeś nowe aukcje ale ich nie zindeksowałeś, nie uwzględni ich w wyszukiwaniu. W celu zindeksowania aukcji kliknij i przytrzymaj przez chwilę dowolny tag.  
+![Alt text](assets/show_offer_tags_find_mode_3.gif)
+
+Po wyszukaniu aukcji z danym tagiem ich numery oddzielone spacją zostaną wklejone w pole wyszukiwania co spowoduje wyświetlenie tych aukcji na liście ofert. W przypadku gdy długość wklejanego tekstu będzie większa niż 3000 znaków co jest ograniczeniem w wyszukiwaniu na stronie "mój asortyment", aukcje zostaną pogrupowane w zestawy których długość nie będzie przekraczać 3000 znaków i zostaną wyświetlone w dodatkowej ramce, po kliknięciu danego zestawu zostanie od podstawiony do pola wyszukiwania.
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read``
 <br>  
@@ -489,7 +484,8 @@ Moduł może działać automatycznie co określony okres czasu (1 - 24 godziny) 
 
 ![Alt text](assets/check_shipments_status.gif)
 
-Sprawdzane są przesyłki do 14 dni wstecz. Pierwsze sprawdzanie przesyłek może trwać chwilę dłużej gdyż pobierane są informacje o wszystkich przesyłkach, później jest już szybciej gdyż kolejne sprawdzanie pomija przesyłki które są już doręczone.
+Sprawdzane są przesyłki do 14 dni wstecz. Pierwsze sprawdzanie przesyłek może trwać chwilę dłużej gdyż pobierane są informacje o wszystkich przesyłkach, później jest już szybciej gdyż kolejne sprawdzanie pomija przesyłki które są już doręczone.  
+Aby oznaczyć przesyłkę w oknie z wynikami jako przeczytaną żeby nie pojawiała się przy kolejnych wyszukiwaniach - kliknij i przytrzymaj przez chwilę jej numer.
 
 Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, allegro:api:shipments:read, allegro:api:shipments:write``
 <br>  
