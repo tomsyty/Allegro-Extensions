@@ -49,3 +49,8 @@
 [2026-03-12] v1.1.7
 - Dodano nowy moduł "Wyróżnianie wiadomości od kupującego" który na stronie "Zamówienia" wyróżnia kolorem tekst wiadomości do zakupu
 - Moduł "Pokazuj status przesyłek" zyskał dodatkową funkcjonalność - automatycznej pracy w tle, co pozwala sprawdzać statusy przesyłek bez konieczności wchodzenia na stronę "Wysyłam z Allegro - Przesyłki i podjazdy". Sprawdzanie dotyczy ostatnich 14 dni, dodatkowo informuje gdy od momentu gdy przesyłka jest gotowa do odbioru minęły więcej niż 24 godziny (lub 48 godzin w przypadku przesyłek Orlen)
+[2026-04-12] v1.1.8
+- Poprawiono działanie wielu modułów które zostało zakłócone zmianami kodu strony Allegro jakiś czas temu. Głównie dotyczyło to modułów "Zmiana tytułu aukcji na liście ofert", "Szybka zmiana liczby przedmiotów", "Pokazuj nazwę produktu i jego ocenę na liście ofert", "Kontroluj parametry produktowe".
+- Usunięto moduł "Szybkie wysyłanie nowej wiadomości do kupującego" z racji tego że taką funkcjonalność wprowadziło już Allegro.
+- Dodano opcje oznaczania informacji o statusie przesyłki jako przeczytanej w module "Pokazuj status przesyłek" aby informacja niepotrzebnie nie pojawiała się w kolejnych wyszukiwaniach.
+- Dostosowano rozszerzenie do wymagań wchodzących z końcem czerwca opisanych na stronie aktualności w tym artykule. W przypadku korzystania z funkcjonalności opartych o API, wymagana będzie ponowna rejestracja aplikacji z podaniem unikalnej nazwy widocznej na stronie opcji rozszerzenia
