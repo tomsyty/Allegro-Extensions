@@ -1,7 +1,7 @@
 ## Allegro Extensions
 To rozszerzenie usprawnia pracę z Allegro dodając brakujące funkcjonalności i automatyzując niektóre czynności. Składa się z wielu modułów, które mogą być włączane w zależności od potrzeb.
 
-Jest to rozszerzenie do przeglądarki Chrome. Wszystkie rozszerzenia testuję tylko dla systemu Windows 10 i najnowszej wersji przeglądarki.
+Jest to rozszerzenie do przeglądarki Chrome. Wszystkie rozszerzenia testuję tylko dla systemu Windows 10/11 i najnowszej wersji przeglądarki.
 
 **Na wstępie pragnę zaznaczyć że nie odpowiadam za żadne problemy wynikłe z użytkowania tego rozszerzenia. Z wielu funkcjonalności po prostu nie korzystam - np. z zestawów produktów, wznawiania ofert z pełnym zestawem przedmiotów itp. tak więc nie wiem jak zachowa się ono w określonych sytuacjach.**
 
