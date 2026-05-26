@@ -222,6 +222,12 @@ Przy nadawaniu do pól wstawiane są wartości domyśłne (lub zaznaczana jest d
 
 ![Alt text](assets/autofill_package_size_change_default_template.gif)  
 
+Czasami może być wymagane dodanie niewielkiego opóźnienia przed rozpoczęciem wypełnianiem pól formularza oraz pomiędzy uzupełnianiem poszczególnych pól, aby uzupełniane wartości zostały zastosowane. Służą do tego dwa suwaki opóźnienia.
+
+![Alt text](assets/autofill_package_size_additional_delay.png)  
+
+Staraj się zwracać uwagę na wagę gabarytową, czy ulega ona zmianie w trakcie automatycznego wypełniania pól. Jeśli nie, zwiększ opóźnienie.
+
 Allegro wprowadziło w dn. 08.07.2025 r. podpowiadanie wagi przesyłki oparte na AI, zmieniając też trochę layout strony. Moduł został zaktualizowany do nowego layoutu. Gify prezentujące działanie modułu przedstawiają jeszcze stary wygląd, możliwe że coś się wkrótce zmieni tak więc póki co nie aktualizuję dokumentacji w tym zakresie. Jeśli chcesz korzystać z podpowiadania oferowanego przez Allegro - ustaw wagę na 0.
 
 <br>  
@@ -242,6 +248,10 @@ Zmiany domyślnej opcji możesz dokonać w ustawieniach rozszerzenia lub klikaj�
 ![Alt text](assets/inpost_send_mode.gif)
 
 Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy użyciu przycisku "Nadaj wiele".
+
+Czasami może być wymagane dodanie niewielkiego opóźnienia przed automatycznym zaznaczaniem sposobu nadania, jeśli mimo zaznaczenia w rzeczywistości opcja nie ulega zmianie w momencie zamawiania przesyłki. Służy temu suwak opóźnienia. 
+
+![Alt text](assets/inpost_send_mode_additional_delay.png)    
 <br>  
 <br>  
 
