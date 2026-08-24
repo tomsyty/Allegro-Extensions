@@ -61,3 +61,11 @@
 [2026-06-01] v1.2.0
 - Dostosowano działanie modułów "Wypełnianie wagi i wielkości przesyłki", "Szybkie przełączanie sposobu nadawania przesyłek InPost", "Wykrywanie błędów w danych adresowych" do ostatnich zmian w kodzie strony Allegro.
 - Moduły "Pokazuj stan magazynowy i nazwę produktu na liście zamówień" (pobieranie listy zamówień) i "Pokazuj tagi ofertowe na liście ofert" (wyszukiwanie aukcji po tagach po jego kliknięciu) zyskały możliwość przerwania pracy gdy aktywny jest pasek postępu.
+[2026-08-24] v1.2.1
+- Poprawki nie działających lub nie w pełni działających modułów po ostatnich zmianach na stronie Sales Center:
+  - "Szybka zmiana liczby przedmiotów" - zmiana stanu w przypadku synchronizacji z Erli nie wymaga już czekania na potwierdzenie dokonania zmiany na Allegro, gdy nie uda się tego dokonać w wyznaczonym czasie, aukcja na Erli zostanie zaktualizowana pomimo braku informacji o wprowadzeniu zmiany na Allegro. Zmiana stanu na 0 na Allegro kończy aukcję na Erli.
+  - "Akcje Erli" - naprawiono nie działające menu z opcjami dotyczącymi Erli.
+  - "Pokazuj statystyki kupujących" - naprawiono brak wyświetlania rezultatu działania modułu.
+  - "Pokazuj stan magazynowy i nazwę produktu na liście zamówień" - naprawiono brak wyświetlania rezultatu działania modułu.
+  - "Przywracanie przedmiotów z anulowanego zamówienia" -  poprawiono wykrywanie anulowanego zamówienia na stronie.
+- Ujednolicono styl ikon w modułach korzystających z Material Symbols.
