@@ -69,3 +69,6 @@
   - "Pokazuj stan magazynowy i nazwę produktu na liście zamówień" - naprawiono brak wyświetlania rezultatu działania modułu.
   - "Przywracanie przedmiotów z anulowanego zamówienia" -  poprawiono wykrywanie anulowanego zamówienia na stronie.
 - Ujednolicono styl ikon w modułach korzystających z Material Symbols.
+[2026-08-28] v1.2.2
+- Dostosowano moduł "Pokazuj status przesyłek" do ostatnich zmian na stronie.
+- Poprawiono działanie modułów "Szybka zmiana liczby przedmiotów" i "Pokazuj stan magazynowy i nazwę produktu na liście zamówień" przy synchronizacji stanu w Erli. w przypadku gdy pola które te moduły mają edytować są zablokowane przed edycją, pojawi się odpowiedni komunikat informujący o braku możliwości ich edycji w Erli.
