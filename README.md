@@ -186,31 +186,25 @@ Po kliknięciu tego przycisku wszystkie czynności związane z pobieraniem i wyd
 
 Aby uniknąć omyłkowego wydruku tej samej etykiety, po wydruku przycisk "Nadaj etykietę" na stronie Sales Center przy danym zamówieniu zostanie zablokowany.
 
+Jeśli program allegro_extensions.exe nie uruchamia się, sprawdź czy nie jest zablokowany przez systemową funkcję "Kontrola aplikacji i przeglądarki" (Windows 11).
+
 Moduł ten działa tylko dla pojedynczych przesyłek. W przypadku korzystania z opcji "Nadaj wiele", przycisk "Zapisz i drukuj" nie będzie widoczny na stronie.
 <br>  
 <br> 
 
 ### Wypełnianie wagi i wielkości przesyłki
 
-Pozwala automatycznie wypełnić pola dotyczące wielkości przesyłki (lub zaznaczyć odpowiednią wielkość). Definiowane osobno dla każdej formy dostawy. Dla przesyłek których wymiary podaje się ręcznie, nie z wybieralnej listy, dodaje dodatkowo opcje do 9 szablonów których kliknięcie szybko wstawi dane wartości do pól dotyczących wielkości przesyłki. Ponadto długie przytrzymanie przycisku danego szablonu (lub wybieralnej predefiniowanej opcji) oznaczy ten szablon (tą opcję) jako domyślną.
+Pozwala automatycznie wypełnić pola dotyczące wielkości przesyłki zaznaczając automatycznie typ opakowania - inne, po czym wypełnia pola długość, szerokość, wysokość i waga. Definiowane osobno dla każdej formy dostawy. Moduł dodaje do 9 szablonów eidocznych pod przyciskami "Moje opakowania / inne" których kliknięcie szybko wstawi dane wartości do pól dotyczących wielkości przesyłki. Ponadto długie przytrzymanie przycisku danego szablonu oznaczy ten szablon jako domyślny.
 
 ![Alt text](assets/autofill_package_size_numeric_values_filled.png)
 
 Moduł ten działa również przy nadawaniu wielu przesyłek jednocześnie przy użyciu przycisku "Nadaj wiele", nie uwzględnia jednak dodatkowych przesyłek w ramach jednego zamówienia - po kliknięciu przycisku "Dodaj kolejną przesyłkę".
 
-Na stronie opcji rozrzerzenia trzeba skonfigurować wartości domyślne. W przypadku wartości których wymiary podaje się w polach długość, szerokość, wysokość i waga - należy wpisać je w odpowiednich polach i kliknąć "Zapisz", lub dodać kolejne szablony jeśli planujemy korzystać z większej liczby rozmiarów przesyłek przy nadawaniu. W momencie zapisywania szablon który był zaznaczony staje się szablonem domyślnym. W przypadku przesyłek które posiadają predefiniowane wymiary - należy zaznaczyć domyślną opcję i kliknąć "Zapisz".
+Na stronie opcji rozrzerzenia trzeba skonfigurować wartości domyślne. Po wpisaniu wartości w polach długość, szerokość, wysokość i waga - należy kliknąć "Zapisz", lub dodać kolejne szablony jeśli planujemy korzystać z większej liczby rozmiarów przesyłek przy nadawaniu. W momencie zapisywania szablon który był zaznaczony staje się szablonem domyślnym.
 
 ![Alt text](assets/autofill_package_size_settings.gif)
 
-Na liście metod dostawy dodane są najpopularniejsze opcje dostawy. Ograniczenia dotyczące wartości maksymalnych i minimalnych dla danych form dostawy mogą się okresowo zmieniać, jeśli wpiszesz wartości które przy wprowadzaniu w ustawieniach mieściły się w dopuszczalnym przedziale ale przy nadawaniu dają błąd za mały lub za duży wymiar - daj znać, postaram się je poprawić. Można dodawać nowe metody, których nie ma ma liście, wybierając wartość "Dodaj nową". Następnie należy wybrać czy będzie to metoda dostawy w której podaje się wartości numeryczne pól długość, szerokość, wysokość i waga, czy wybiera się z listy. 
-
-W przypadku wartości numerycznych, postępuj tak jak wcześniej przy uzupełnianiu domyślnych wartości.
-
-W przypadku wartości predefiniowanych, rozwiń menu klikając strzałkę obok przycisku "Zapisz" i wybierz "Dodaj wybieralną pozycję". W formularzu "Wysyłam z Allegro" zaznacz nazwę przy danej predefiniowanej wartości, skopiuj ją
-
-![alt text](assets/autofill_package_size_add_prefefined_value.png)
-
-a następnie kliknij tekst "Kliknij tutaj aby wkleić ze schowka skopiowany tekst". Tak naprawdę wklejona nazwa nie ma znaczenia - liczy się która w kolejności jest to pozycja. Moduł nie zaznacza wyszukując po nazwie, tylko po numerze. Jeśli np. korzystasz tylko z pierwszych 3 opcji, nie musisz dodawać kolejnych. Jeśli jednak korzystasz np. tylko z ostatniej opcji, musisz dodać też wszystkie wcześniejsze. Pamiętaj że jeśłi zmieni się liczba tych opcji (mało prawdopodobne) będzie trzeba zmienić też to w ustawieniach.
+Na liście metod dostawy dodane są najpopularniejsze opcje dostawy. Ograniczenia dotyczące wartości maksymalnych i minimalnych dla danych form dostawy mogą się okresowo zmieniać, jeśli wpiszesz wartości które przy wprowadzaniu w ustawieniach mieściły się w dopuszczalnym przedziale ale przy nadawaniu dają błąd za mały lub za duży wymiar - daj znać, postaram się je poprawić. Można dodawać nowe metody, których nie ma ma liście, wybierając wartość "Dodaj nową".
 
 Dla nowo dodawanych metod dostawy nie ma ograniczeń dotyczących wymiarów i wagi (można wpisać od 1 do 999). Ponadto jeśli zmienisz nazwę metody dostawy spośród tych dodanych domyślnie na liście, przestaną obowiązywać ograniczenia dotyczące wymiarów i wagi. Późniejsze przywrócenie tej nazwy do nazwy pierwotnej nie przywróci już tych ograniczeń, tak więc jeśli potrzebujesz wpisać wartości spoza zakresu, zmień tymczasowo nazwę metody dostawy, przywróć ją do poprzedniej wartości i będziesz mógł wprowadzić dowolne wartości z zakresu od 1 do 999.
 
@@ -218,7 +212,7 @@ Nazwa metody dostawy musi być dokładnie tą nazwą, która widnieje w formular
 
 ![Alt text](assets/autofill_package_size_new_method_name.png)
 
-Przy nadawaniu do pól wstawiane są wartości domyśłne (lub zaznaczana jest domyślna opcja). Aby wstawić inne wartości, kliknij nazwę szablonu. Aby ustawić dany szablon jako domyślny, możesz kliknąć i przytrzymać daną nazwę szablonu (lub wybieralną opcję) aż podświetli się na zielono. Możesz też zmienić to w ustawieniach zaznaczając odpowieni szablon (opcję) i klikając "Zapisz".
+Przy nadawaniu do pól wstawiane są wartości domyślnego szablonu. Aby wstawić inne wartości, kliknij nazwę innego szablonu. Aby ustawić dany szablon jako domyślny, możesz kliknąć i przytrzymać daną nazwę szablonu aż podświetli się na zielono. Możesz też zmienić to w ustawieniach zaznaczając odpowieni szablon i klikając "Zapisz".
 
 ![Alt text](assets/autofill_package_size_change_default_template.gif)  
 
@@ -228,7 +222,7 @@ Czasami może być wymagane dodanie niewielkiego opóźnienia przed rozpoczęcie
 
 Staraj się zwracać uwagę na wagę gabarytową, czy ulega ona zmianie w trakcie automatycznego wypełniania pól. Jeśli nie, zwiększ opóźnienie.
 
-Allegro wprowadziło w dn. 08.07.2025 r. podpowiadanie wagi przesyłki oparte na AI, zmieniając też trochę layout strony. Moduł został zaktualizowany do nowego layoutu. Gify prezentujące działanie modułu przedstawiają jeszcze stary wygląd, możliwe że coś się wkrótce zmieni tak więc póki co nie aktualizuję dokumentacji w tym zakresie. Jeśli chcesz korzystać z podpowiadania oferowanego przez Allegro - ustaw wagę na 0.
+Jeśli chcesz korzystać z podpowiadania wagi oferowanego przez Allegro - w szablonach ustaw wagę na 0.
 
 <br>  
 <br>  
@@ -237,8 +231,7 @@ Allegro wprowadziło w dn. 08.07.2025 r. podpowiadanie wagi przesyłki oparte na
 
 Zaznacza automatycznie wybrany sposób nadania przesyłki InPost: 
 - Nadam przesyłkę z podjazdem kuriera InPost  
-- Nadam przesyłkę w Paczkomacie InPost  
-- Nadam przesyłkę w PaczkoPunkcie InPost
+- Nadam przesyłkę w Paczkomacie lub PaczkoPunkcie InPost
 
 
 ![Alt text](assets/inpost_send_mode_pickup_point_selected.png)
