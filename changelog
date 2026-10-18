@@ -75,3 +75,5 @@
 [2026-10-17] v1.2.3
 - Dostosowano do ostatnich zmian (pojawienie się "Moje opakowania" w Wysyłam z Allegro) moduł "Wypełnianie wagi i wielkości przesyłki". Zaznacza on teraz opcję "Inne" i wypełnia parametry przesyłki. Ze względu na zmianę niektórych form dostawy (gabaryty A/B/C na wartości numeryczne) wymagane jest przejrzenie ustawień listy przesyłek i ponowne uzupełnienie niektórych wartości domyślnych dla tych form dostawy.
 - Dostosowano do systemu Windows 11 moduł "Automatyczne pobieranie i drukowanie etykiet adresowych" - konieczne jest pobranie nowej wersji programu "allegro_extensions.exe" (pobrać i rozpakować "allegro_extensions_drukowanie.zip").
+[2026-10-18] v1.2.4
+- Poprawiono dodawanie nowej metody dostawy w module "Wypełnianie wagi i wielkości przesyłki".
