@@ -77,3 +77,6 @@
 - Dostosowano do systemu Windows 11 moduł "Automatyczne pobieranie i drukowanie etykiet adresowych" - konieczne jest pobranie nowej wersji programu "allegro_extensions.exe" (pobrać i rozpakować "allegro_extensions_drukowanie.zip").
 [2026-10-18] v1.2.4
 - Poprawiono dodawanie nowej metody dostawy w module "Wypełnianie wagi i wielkości przesyłki".
+[2026-10-31] v1.2.5
+- Dostosowano do zmian na Allegro moduł "Pokazuj nazwę produktu i jego ocenę na liście ofert" - z racji tego że nazwa produktu jest już domyślnie pokazywana, usunięto tą funkcjonalność, pozostawiono jedynie pokazywanie oceny w formie graficznego rozkładu liczby gwiazdek, przemianowano tym samym nazwę modułu na "Pokazuj ocenę produktu na liście ofert".
+- Dostosowano do zmian na Allegro moduł "Kontroluj parametry produktowe".
