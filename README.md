@@ -379,9 +379,9 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:sale:offers:read,
 <br>  
 <br>  
 
-### Pokazuj nazwę produktu na liście ofert
+### Pokazuj ocenę produktu na liście ofert
 
-Moduł ten pokazuje nazwę produktu na liście ofert w kolumnie "Katalog produktów Allegro". Dodatkowo pokazuje średnią ocenę produktu wraz z reprezentacją graficzną rozkładu liczby gwiazdek. 
+Moduł ten pokazuje reprezentację graficzną rozkładu liczby gwiazdek oceny produktu bez konieczności wchodzenia w szczegóły produktu. Pozwala to łatwiej dostrzec sytuację gdy przybywa złych ocen produktu a średnia zmienia się tylko w niewielkim stopniu.
 
 ![Alt text](assets/show_product_name.png)
 
@@ -496,7 +496,7 @@ Ten moduł korzysta z API. Wymagane uprawnienia: ``allegro:api:orders:read, alle
 
 ### Kontroluj parametry produktowe
 
-Ten moduł pozwala zorientować się że w produkcie podpiętym do aukcji dokonano zmiany. W razie jej wykrycia na liście aukcji w kolumnie "Katalog Allegro" pojawi się link "zmiany w produkcie", po wskazaniu którego wyświetli się okno ze szczegółami zmiany.  
+Ten moduł pozwala zorientować się że w produkcie podpiętym do aukcji dokonano zmiany. W razie jej wykrycia na liście aukcji w kolumnie "Produkt" pojawi się link "zmiany w produkcie", po wskazaniu którego wyświetli się okno ze szczegółami zmiany.  
 Moduł może działać automatycznie co określony okres czasu (1 - 24 godziny) sprawdzając aukcje w tle - przy włączonej przeglądarce, nie musi być uruchomiona strona Sales Center. W razie wykrycia zmian w systemowym centrum powiadomień pojawi się informacja o wykryciu zmian i ich liczbie a w oknie przy ikonie rozszerzenia pojawi się lista aukcji w których dokonano zmian w produktach. Po ich kliknięciu otworzy się strona z daną aukcją w Sales Center, gdzie po wskazaniu linku "zmiany w produkcie" będzie można zapoznać się z tymi zmianami.
 
 ![Alt text](assets/parameters_watcher_sample_change.png)
